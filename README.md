@@ -16,7 +16,7 @@ You will currently need to follow prerequisites installed:
 
 To intall the LESS preprocessor run the following after installing Nodejs
 
-    sudo npm install less
+    sudo npm install -g less
 
 [nodejs]: http://nodejs.org
 [volo]: https://github.com/volojs/volo
