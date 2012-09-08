@@ -21,3 +21,10 @@ To intall the LESS preprocessor run the following after installing Nodejs
 [nodejs]: http://nodejs.org
 [volo]: https://github.com/volojs/volo
 [less]: https://github.com/cloudhead/less.js
+
+Usage
+=====
+
+Inside the directory you wish to create your project run:
+
+ volo create yourprojectname ossreleasefeed/Sandstone
