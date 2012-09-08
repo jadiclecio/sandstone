@@ -2,6 +2,7 @@
     "name": "sandstone",
     "description": "Bootstrap for static sites in the Mozilla universe",
     "author": "espressive <sneethling@mozilla.com>",
+    "version": "0.1",
     "devDependencies": {
         "grunt-less": ">=0.1.x"
     },
