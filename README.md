@@ -18,13 +18,28 @@ To intall the LESS preprocessor run the following after installing Nodejs
 
     sudo npm install -g less
 
-[nodejs]: http://nodejs.org
-[volo]: https://github.com/volojs/volo
-[less]: https://github.com/cloudhead/less.js
-
 Usage
 =====
 
 Inside the directory you wish to create your project run:
 
     volo create yourprojectname ossreleasefeed/Sandstone
+
+Grunt Tasks
+===========
+
+The current [Grunt][grunt] tasks included:
+
+    grunt
+
+This will run the default task which uses lessc to preprocess your .less files
+
+    grunt lint
+
+This will lint, using JSHint, your grunt file itself as well as all .js files inside the
+js folder.
+
+[nodejs]: http://nodejs.org
+[volo]: https://github.com/volojs/volo
+[less]: https://github.com/cloudhead/less.js
+[grunt]: http://github.com/cowboy/grunt
