@@ -5,6 +5,10 @@ module.exports = function(grunt) {
             sandstone: {
                 src: 'media/css/sandstone/sandstone.less',
                 dest: 'media/css/sandstone.css'
+            },
+            sandstone_resp: {
+                src: 'media/css/sandstone/sandstone-resp.less',
+                dest: 'media/css/sandstone-resp.css'
             }
         },
         lint: {

@@ -3,7 +3,6 @@
 @import "reset.less";
 @import "fonts.less";
 @import "buttons.less";
-@import "columns.less";
 
 /* {{{ Basic Colors, Text, Links */
 
@@ -539,6 +538,17 @@ nav.menu-bar {
         font-size: 18px;
     }
 
+    .field-privacy {
+        font-size: @smallFontSize;
+        input {
+            float: left;
+        }
+        .title {
+            display: block;
+            padding-left: 25px;
+        }
+    }
+
 }
 
 #footer-email-form.thank {
@@ -583,9 +593,8 @@ nav.menu-bar {
     margin: 1em 0 0;
 
     .row {
-        width: @gridRowWidth;
+        width: @widthDesktop - (@gridGutterWidth * 2);
         margin: 0 auto;
-        padding: 0 @gridGutterWidth;
         .clearfix;
     }
 
@@ -651,6 +660,10 @@ nav.menu-bar {
     .container {
         width: @widthTablet - (@gridGutterWidth * 2);
     }
+    
+    nav.menu-bar {
+        font-size: .9375em;
+    }
 
     .sidebar {
         .offset(0);
@@ -673,9 +686,7 @@ nav.menu-bar {
 
     #colophon {
         .row {
-            width: @gridRowWidthTablet;
-            padding-left: @gridGutterWidth / 2;
-            padding-right: @gridGutterWidth / 2;
+            width: @widthTablet - (@gridGutterWidth * 2);
         }
         .footer-logo {
             .span_narrow(4);
@@ -751,6 +762,7 @@ nav.menu-bar {
         }
 
         nav.breadcrumbs {
+            margin-left: 0;
             a,
             span {
                 margin-right: .3em;
@@ -803,6 +815,7 @@ nav.menu-bar {
             padding-bottom: @baseLine / 2;
             li {
                 display: block;
+                padding: 0;
                 a {
                     padding: @baseLine / 2;
                     border: 0;
@@ -832,8 +845,7 @@ nav.menu-bar {
     
     #colophon {
         .row {
-            width: auto;
-            padding: 0;
+            width: @widthMobile - @gridGutterWidth;
         }
         .footer-logo,
         .footer-license,
@@ -973,7 +985,7 @@ nav.menu-bar {
     .container,
     .main-column,
     .sidebar {
-        width: @widthMobileLandscape - @gridGutterWidth;
+        width: auto;
     }
 
     .main-column,
@@ -984,8 +996,7 @@ nav.menu-bar {
 
     #colophon {
         .row {
-            width: auto;
-            padding: 0;
+            width: @widthMobileLandscape - @gridGutterWidth;
         }
     }
 
