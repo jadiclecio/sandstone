@@ -1,0 +1,9 @@
+{
+    "name": "sandstone",
+    "description": "Bootstrap for static sites in the Mozilla universe",
+    "author": "espressive <sneethling@mozilla.com>",
+    "devDependencies": {
+        "grunt-less": ">=0.1.x"
+    },
+    "engine": "node >= 0.6.12"
+}
