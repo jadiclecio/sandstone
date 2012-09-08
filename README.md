@@ -12,7 +12,7 @@ You will currently need to follow prerequisites installed:
 
 * [Nodejs][nodejs]
 * [Volo][volo]
-* [lessc (Look under the Server-Side install heading)][lessc]
+* [lessc - Look under the Server-Side install heading][lessc]
 
 [nodejs]: http://nodejs.org
 [volo]: https://github.com/volojs/volo
