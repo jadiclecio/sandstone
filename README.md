@@ -12,8 +12,12 @@ You will currently need to follow prerequisites installed:
 
 * [Nodejs][nodejs]
 * [Volo][volo]
-* [LESS compiler][lessc] - Look under the Server-Side install heading
+* [LESS][less]
+
+To intall the LESS preprocessor run the following after installing Nodejs
+
+ sudo npm install less
 
 [nodejs]: http://nodejs.org
 [volo]: https://github.com/volojs/volo
-[lessc]: hhttp://lesscss.org/#-client-side-usage
+[less]: https://github.com/cloudhead/less.js
