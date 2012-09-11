@@ -13,10 +13,17 @@ module.exports = function(grunt) {
         },
         lint: {
             files: ['grunt.js', 'js/*.js']
+        },
+        csslint: {
+            base_theme: {
+                src: "css/*.css"
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-less');
+    grunt.loadNpmTasks('grunt-css');
 
     grunt.registerTask('default', 'less');
+    grunt.registerTask('lintify', 'lint csslint');
 };
