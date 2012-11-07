@@ -13,10 +13,17 @@ You will currently need to follow prerequisites installed:
 * [Nodejs][nodejs]
 * [Volo][volo]
 * [LESS][less]
+* [Grunt][grunt]
 
 To intall the LESS preprocessor run the following after installing Nodejs
 
-    sudo npm install -g less
+    (sudo) npm install -g less
+
+Next install Grunt:
+
+    (sudo) npm install -g grunt
+
+You may be required to use sudo but, in most cases it will be optional.
 
 Usage
 =====
