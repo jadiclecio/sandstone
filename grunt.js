@@ -2,13 +2,31 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         less: {
-            sandstone: {
-                src: 'css/sandstone/sandstone.less',
-                dest: 'css/sandstone.css'
+            sandstone_dev: {
+                files: {
+                    'css/sandstone.css' : 'css/sandstone/sandstone.less'
+                }
             },
-            sandstone_resp: {
-                src: 'css/sandstone/sandstone-resp.less',
-                dest: 'css/sandstone-resp.css'
+            sandstone_resp_dev: {
+                files: {
+                    'css/sandstone-resp.css' : 'css/sandstone/sandstone-resp.less'
+                }
+            },
+            sandstone_prod: {
+                options: {
+                    compress: true
+                },
+                files: {
+                    'css/sandstone.min.css' : 'css/sandstone/sandstone.less'
+                }
+            },
+            sandstone_resp_prod: {
+                options: {
+                    compress: true
+                },
+                files: {
+                    'css/sandstone-resp.min.css' : 'css/sandstone/sandstone-resp.less'
+                }
             }
         },
         lint: {
@@ -21,9 +39,11 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-less');
+    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-css');
 
-    grunt.registerTask('default', 'less');
+    grunt.registerTask('default', 'less:sandstone_dev less:sandstone_resp_dev');
     grunt.registerTask('lintify', 'lint csslint');
+    grunt.registerTask('prep_prod', 'less:sandstone_prod lintify');
+    grunt.registerTask('prep_resp_prod', 'less:sandstone_resp_prod lintify');
 };

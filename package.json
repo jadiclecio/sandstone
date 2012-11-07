@@ -4,7 +4,7 @@
     "author": "espressive <sneethling@mozilla.com>",
     "version": "0.1.1",
     "devDependencies": {
-        "grunt-less": ">=0.1.x",
+        "grunt-contrib-less": ">=0.3.x",
         "grunt-css": ">=0.2.x"
     },
     "engine": "node >= 0.6.12"
