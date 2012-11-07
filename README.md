@@ -25,11 +25,20 @@ Inside the directory you wish to create your project run:
 
     volo create yourprojectname ossreleasefeed/Sandstone
 
-After you project folder is created change directory into the newly created folder and run:
+If you are going to use Git as your source control now would be a good time to initialize your repo.
+After changing into the newly created project folder run:
+
+    git init
+
+While inside your project directory run:
 
     npm install
 
-This will install any additional dependencies defined inside package.json
+This will install any additional dependencies defined inside package.json. Inside your new project folder
+there will be a .gitignore file that will ensure that the node_modules folder created above, and any .css
+files will not be included in source control.
+
+Feel free to add any additional exclusions you require.
 
 Grunt Tasks
 ===========
