@@ -25,6 +25,12 @@ Inside the directory you wish to create your project run:
 
     volo create yourprojectname ossreleasefeed/Sandstone
 
+After you project folder is created change directory into the newly created folder and run:
+
+    npm install
+
+This will install any additional dependencies defined inside package.json
+
 Grunt Tasks
 ===========
 
