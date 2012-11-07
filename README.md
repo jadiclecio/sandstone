@@ -30,7 +30,7 @@ After changing into the newly created project folder run:
 
     git init
 
-While inside your project directory run:
+Next, while inside your project directory run:
 
     npm install
 
