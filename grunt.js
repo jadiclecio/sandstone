@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         less: {
-            sandstone_dev: {
+            sandstone: {
                 files: {
                     'css/sandstone-resp.css' : 'css/sandstone/sandstone-resp.less'
                 }
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-css');
 
-    grunt.registerTask('default', 'less:sandstone_dev');
+    grunt.registerTask('default', 'less:sandstone');
     grunt.registerTask('lintify', 'lint csslint');
-    grunt.registerTask('prep_prod', 'less:sandstone_prod lintify');
+    grunt.registerTask('prep_prod', 'less:sandstone lintify less:sandstone_prod');
 };
