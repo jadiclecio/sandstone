@@ -19,9 +19,38 @@ module.exports = function(grunt) {
         lint: {
             files: ['grunt.js', 'js/*.js']
         },
+        jshint: {
+            options: {
+                bitwise: true,
+                camelcase: true,
+                curly: true,
+                eqeqeq: true,
+                forin: true,
+                immed: true,
+                latedef: true,
+                newcap: true,
+                noarg: true,
+                quotmark: "single",
+                regexp: true,
+                undef: true,
+                unused: true,
+                trailing: true,
+                browser: true,
+                jquery: true
+            }
+        },
         csslint: {
             base_theme: {
-                src: "css/*.css"
+                src: "css/*.css",
+                rules: {
+                    "empty-rules": 2,
+                    "fallback-colors": 2,
+                    "font-sizes": 2,
+                    "important": 2,
+                    "outline-none": 2,
+                    "vendor-prefix": 2,
+                    "zero-units": 2
+                }
             }
         }
     });
