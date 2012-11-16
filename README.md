@@ -1,5 +1,4 @@
-Sandstone
-=========
+# Sandstone #
 
 A bootstrap for sites in the Mozilla Universe. This project aims to automate as much
 of the process of starting a new website using the Mozilla Sandstone theme as possible and,
@@ -7,8 +6,7 @@ also provides the tools, via Grunt, to preprocess, lint and minify/uglify the as
 
 *NOTE:* For sites based on Django/Playdoh, the Grunt file is not currently included.
 
-Prerequisites
-=============
+# Prerequisites #
 
 You will currently need to following prerequisites installed:
 
@@ -19,7 +17,7 @@ To intall the LESS preprocessor run the following after installing Nodejs
 
     (sudo) npm install -g less
 
-If you are using sandstone for a static website, you will also want:
+*Note:* If you are using sandstone for a static website, you will also want:
 
 * [Grunt][grunt]
 
@@ -29,10 +27,9 @@ Install Grunt:
 
 You may be required to use sudo but, in most cases it will be optional.
 
-Usage
-=====
+# Usage #
 
-For static sites:
+## For static sites ##
 
 Inside the directory you wish to create your project clone Sandstone:
 
@@ -48,7 +45,7 @@ as any .css files will not be included in source control.
 
 Feel free to add any additional exclusions you require.
 
-For sites based on Playdoh
+## For sites based on Playdoh ##
 
 If you have not already, create your project using the following documentation:
 
@@ -74,8 +71,7 @@ to create your template views.
 
 When done, the tmp directory will be removed.
 
-Grunt Tasks
-===========
+# Grunt Tasks #
 
 *NOTE:* only avaible to static sites
 
