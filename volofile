@@ -1,0 +1,49 @@
+var fs = require('fs');
+var path = require('path');
+
+module.exports = {
+    // Install Sandstone inside a Django/Playdoh container
+    install_sandstone: {
+        run: function(d, v, namedArgs) {
+            var projectName = namedArgs.project;
+
+            if(!projectName) {
+                console.log('Please specify you project name using the project=name argument');
+                return;
+            }
+
+            function finished_message() {
+                console.log('\nSandstone installed\n');
+            }
+
+            v.command('add', 'ossreleasefeed/Sandstone', projectName)
+                .then(function() {
+                    var projectBase = projectName + '/base/',
+                        templateDir = projectBase + 'templates',
+                        projectStatic = projectBase + '/static/',
+                        lessFileDir = projectStatic + 'css',
+                        jsFileDir = projectStatic + 'js',
+                        fontFilesDir = projectStatic + 'fonts',
+                        imgFilesDir = projectStatic + 'img';
+
+                    // Copy the LESS files
+                    v.copyDir('css', lessFileDir);
+
+                    // Copy js files
+                    v.copyDir('js', jsFileDir);
+
+                    // Copy fonts
+                    v.copyDir('fonts', fontFilesDir);
+
+                    // Copy images
+                    v.copyDir('img', imgFilesDir);
+
+                    // Copy base template
+                    v.copyFile('base.html', templateDir);
+
+                    finished_message();
+                })
+                .then(d.resolve, d.reject);
+        }
+    }
+};
