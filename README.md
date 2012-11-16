@@ -10,17 +10,20 @@ also provides the tools, via Grunt, to preprocess, lint and minify/uglify the as
 Prerequisites
 =============
 
-You will currently need to follow prerequisites installed:
+You will currently need to following prerequisites installed:
 
 * [Nodejs][nodejs]
 * [LESS][less]
-* [Grunt][grunt]
 
 To intall the LESS preprocessor run the following after installing Nodejs
 
     (sudo) npm install -g less
 
-Next install Grunt:
+If you are using sandstone for a static website, you will also want:
+
+* [Grunt][grunt]
+
+Install Grunt:
 
     (sudo) npm install -g grunt
 
@@ -28,6 +31,8 @@ You may be required to use sudo but, in most cases it will be optional.
 
 Usage
 =====
+
+For static sites:
 
 Inside the directory you wish to create your project clone Sandstone:
 
@@ -42,6 +47,30 @@ there will also be a .gitignore file that will ensure that the node_modules fold
 as any .css files will not be included in source control.
 
 Feel free to add any additional exclusions you require.
+
+For sites based on Playdoh
+
+If you have not already, create your project using the following documentation:
+
+http://playdoh.readthedocs.org/en/latest/getting-started/installation.html
+
+Once your Playdoh project has been created, cd into the root using:
+
+    cd projectname
+
+Once inside your project root, run the following command:
+
+    volo add ossreleasefeed/Sandstone/master#volofile
+
+This will add the volofile to your Playdog project needed to install sandstone in the following step.
+Once the above completes, run the following command:
+
+    volo install_sandstone project=yourprojectsname
+
+While you wait volo will do it's magic and grab the latest from the Sandstone repo and the, using the
+volofile from before, copy all of the resources you need into the projectname/base/static directory. It
+will also add a new base.html template file to your projectname/templates directory you can then extend
+to create your template views.
 
 Grunt Tasks
 ===========
