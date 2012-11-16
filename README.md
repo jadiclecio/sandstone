@@ -67,10 +67,12 @@ Once the above completes, run the following command:
 
     volo install_sandstone project=yourprojectsname
 
-While you wait volo will do it's magic and grab the latest from the Sandstone repo and the, using the
+While you wait volo will do it's magic and grab the latest from the Sandstone repo and then, using the
 volofile from before, copy all of the resources you need into the projectname/base/static directory. It
 will also add a new base.html template file to your projectname/templates directory you can then extend
 to create your template views.
+
+When done, the tmp directory will be removed.
 
 Grunt Tasks
 ===========
