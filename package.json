@@ -8,5 +8,4 @@
     "grunt-css": ">=0.2.x"
   },
   "engine": "node >= 0.6.12"
-  }
 }
