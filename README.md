@@ -75,6 +75,8 @@ to create your template views.
 Grunt Tasks
 ===========
 
+*NOTE:* only avaible to static sites
+
 The current [Grunt][grunt] tasks included:
 
     grunt
