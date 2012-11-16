@@ -38,9 +38,6 @@ module.exports = {
                     // Copy images
                     v.copyDir('img', imgFilesDir);
 
-                    // Copy base template
-                    v.copyFile('tmp/base.html', templateDir + 'base.html');
-
                     finished_message();
                 })
                 .then(d.resolve, d.reject);
