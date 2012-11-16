@@ -2,23 +2,32 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Your Site Title</title>
-        <link rel="stylesheet" type="text/css" href="css/sandstone-resp.css" media="screen" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Mozilla - Your Site Title - yourdomain.org</title>
+
+        <link rel="shortcut icon" href="img/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" media="screen" />
+
+        <!--[if lte IE 8]>
+        <script src="js/libs/html5shiv.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" type="text/css" href="css/sandstone-resp.css" media="screen" />
     </head>
     <!-- The four different themes of sandstone are, stone, sand, sky, space. Replace the class on the
          body tag below, with the theme you wish to use for your project -->
-    <body id="sandstone" class="stone">
-        <a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
+    <body id="{% block body_id %}{% endblock %}" class="html-{{ DIR }} {% block body_class %}{% endblock %}"{% block body_attrs %}{% endblock %}>
         <div id="outer-wrapper">
             <div id="wrapper">
                 <header id="masthead">
+                    <a href="http://www.mozilla.org/" id="tabzilla">Mozilla</a>
                     <nav id="nav-main" role="menubar">
                         <span class="toggle" role="button" aria-controls="nav-main-menu" tabindex="0">Menu</span>
                         <ul role="menu" id="nav-main-menu">
                             <li role="menuitem" class="first"><a href="//www.mozilla.org/en-US/mission/">Mission</a></li>
                             <li role="menuitem"><a href="//www.mozilla.org/en-US/about/">About</a></li>
-                            <li role="menuitem"><a href="//www.mozilla.org/en-US/products/">Projects</a></li>
+                            <li role="menuitem"><a href="//www.mozilla.org/en-US/products/">Products</a></li>
                             <li role="menuitem" class="last"><a href="//www.mozilla.org/en-US/contribute/">Get Involved</a></li>
                         </ul>
                     </nav>
