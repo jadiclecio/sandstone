@@ -1,9 +1,11 @@
 Sandstone
 =========
 
-A bootstrap for static sites in the Mozilla Universe. This project aims to automate as much
+A bootstrap for sites in the Mozilla Universe. This project aims to automate as much
 of the process of starting a new website using the Mozilla Sandstone theme as possible and,
 also provides the tools, via Grunt, to preprocess, lint and minify/uglify the assets.
+
+*NOTE:* For sites based on Django/Playdoh, the Grunt file is not currently included.
 
 Prerequisites
 =============
