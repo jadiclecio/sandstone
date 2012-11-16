@@ -27,16 +27,16 @@ module.exports = {
                         imgFilesDir = projectStatic + 'img';
 
                     // Copy the LESS files
-                    v.copyDir('css', lessFileDir);
+                    v.copyDir('tmp/css', lessFileDir);
 
                     // Copy js files
-                    v.copyDir('js', jsFileDir);
+                    v.copyDir('tmp/js', jsFileDir);
 
                     // Copy fonts
-                    v.copyDir('fonts', fontFilesDir);
+                    v.copyDir('tmp/fonts', fontFilesDir);
 
                     // Copy images
-                    v.copyDir('img', imgFilesDir);
+                    v.copyDir('tmp/img', imgFilesDir);
 
                     finished_message();
                 })
