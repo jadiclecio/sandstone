@@ -59,7 +59,7 @@ Once inside your project root, run the following command:
 
     volo add ossreleasefeed/Sandstone/master#volofile
 
-This will add the volofile to your Playdog project needed to install sandstone in the following step.
+This will add the volofile to your Playdoh project needed to install sandstone in the following step.
 Once the above completes, run the following command:
 
     volo install_sandstone project=yourprojectsname
@@ -89,3 +89,5 @@ js folder.
 [nodejs]: http://nodejs.org
 [less]: https://github.com/cloudhead/less.js
 [grunt]: http://github.com/cowboy/grunt
+[sandstone]: http://www.mozilla.org/en-US/styleguide/
+
