@@ -16,7 +16,7 @@ module.exports = {
                 console.log('\nSandstone installed\n');
             }
 
-            v.command('add', 'ossreleasefeed/Sandstone', projectName)
+            v.command('add', 'ossreleasefeed/Sandstone', 'tmp')
                 .then(function() {
                     var projectBase = projectName + '/base/',
                         templateDir = projectBase + 'templates',
