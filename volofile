@@ -41,6 +41,9 @@ module.exports = {
                     // Copy base template
                     v.copyFile('tmp/base.html', templateDir + 'base.html');
 
+                    // Remove the temporary files
+                    v.rm('tmp')
+
                     finished_message();
                 })
                 .then(d.resolve, d.reject);
