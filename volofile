@@ -39,7 +39,7 @@ module.exports = {
                     v.copyDir('img', imgFilesDir);
 
                     // Copy base template
-                    v.copyFile('base.html', templateDir);
+                    v.copyFile('*.html', templateDir);
 
                     finished_message();
                 })
