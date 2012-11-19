@@ -38,7 +38,7 @@ module.exports = {
                             var currentFile = "",
                                 currentFileContents = "",
                                 regexp = /\/?\bimg\b|\bfonts\b/g,
-                                newSubStr = lessFileList[file] === 'fonts.less' ? '/static/fonts' : '/static/img';
+                                newSubStr = lessFileList[file] === 'fonts.less' ? 'static/fonts' : '/static/img';
                                 processedStr = "";
 
                             currentFile = tmpLESSPath + lessFileList[file];
