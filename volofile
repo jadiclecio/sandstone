@@ -28,8 +28,11 @@ module.exports = {
 
                     // Before copying, we need to manipulate some strings in the files
                     // to ensure they are found and loaded inside it's new home.
-                    var lessFileList = fs.readdirSync('tmp');
-                    console.log(lessFileList);
+                    var lessFileList = fs.readdirSync('tmp/css/sandstone'),
+                        file = "";
+                    for(file in lessFileList) {
+                        console.log(fs.readFileSync(file));
+                    }
 
                     // Copy the LESS files
                     v.copyDir('tmp/css', lessFileDir);
