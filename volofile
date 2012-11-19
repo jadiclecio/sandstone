@@ -41,7 +41,7 @@ module.exports = {
                                 // but take care not to match the word 'fonts' in ex.
                                 // @import "fonts.less" or img in `img, `
                                 regexp = /\/?\bimg\b[^,\s]|\bfonts\b[^\.]/g,
-                                newSubStr = lessFileList[file] === 'fonts.less' ? 'static/fonts' : '/static/img';
+                                newSubStr = lessFileList[file] === 'fonts.less' ? 'static/fonts/' : '/static/img/';
                                 processedStr = "";
 
                             currentFile = tmpLESSPath + lessFileList[file];
