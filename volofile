@@ -42,7 +42,7 @@ module.exports = {
                             currentFile = tmpLESSPath + lessFileList[file];
                             currentFileContents = fs.readFileSync(currentFile, 'utf-8');
 
-                            console.log(needle.exec(currentFileContents));
+                            console.log(needle.test(currentFileContents));
 
                             processedStr = currentFileContents.replace(needle, '/static/img');
                         }
