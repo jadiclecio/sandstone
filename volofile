@@ -10,6 +10,8 @@ module.exports = {
             // the files, they can pass force=true on the command line.
             command = namedArgs.force ? 'add -f' : 'add';
 
+            console.log(command);
+
             if(!projectName) {
                 console.log('Please specify you project name using the project=name argument');
                 return;
