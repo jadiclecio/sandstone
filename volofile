@@ -26,6 +26,11 @@ module.exports = {
                         fontFilesDir = projectStatic + 'fonts',
                         imgFilesDir = projectStatic + 'img';
 
+                    // Before copying, we need to manipulate some strings in the files
+                    // to ensure they are found and loaded inside it's new home.
+                    var lessFileList = fs.readdirSync('tmp');
+                    console.log(lessFileList);
+
                     // Copy the LESS files
                     v.copyDir('tmp/css', lessFileDir);
 
@@ -42,7 +47,7 @@ module.exports = {
                     v.copyFile('tmp/base.html', templateDir + 'base.html');
 
                     // Remove the temporary files
-                    v.rm('tmp')
+                    v.rm('tmp');
 
                     finished_message();
                 })
