@@ -36,7 +36,7 @@ module.exports = {
                         if(lessFileList.hasOwnProperty(file)) {
                             var currentFile = "",
                                 currentFileContents = "",
-                                needle = new RegExp('/?\bimg\b|\bfonts\b', 'gim'),
+                                needle = new RegExp('/?\bimg\b|\bfonts\b', 'g'),
                                 processedStr = "";
 
                             currentFile = tmpLESSPath + lessFileList[file];
