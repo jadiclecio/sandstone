@@ -19,7 +19,7 @@ module.exports = {
                 console.log('\nSandstone installed\n');
             }
 
-            v.command('add', flag, 'ossreleasefeed/Sandstone', 'tmp')
+            v.command('add', 'ossreleasefeed/Sandstone', 'tmp')
                 .then(function() {
                     var projectBase = projectName + '/base/',
                         templateDir = projectBase + 'templates/',
@@ -55,7 +55,7 @@ module.exports = {
                     console.log('Copying files....');
 
                     // Copy the LESS files
-                    v.copyDir('tmp/css', lessFileDir);
+                    v.copyDir('tmp/css', lessFileDir, false);
 
                     // Copy js files
                     v.copyDir('tmp/js', jsFileDir);
