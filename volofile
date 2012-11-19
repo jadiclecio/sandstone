@@ -43,7 +43,9 @@ module.exports = {
                             currentFileContents = fs.readFileSync(currentFile, 'utf-8');
 
                             processedStr = currentFileContents.replace(needle, '/static/img');
-                            console.log(processedStr);
+                            if(lessFileList[file] === 'fonts.less') {
+                                console.log(processedStr);
+                            }
                         }
                     }
 
