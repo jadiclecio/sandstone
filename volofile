@@ -55,7 +55,7 @@ module.exports = {
                     console.log('Copying files....');
 
                     // Copy the LESS files
-                    v.copyDir('tmp/css', lessFileDir, false);
+                    v.copyDir('tmp/css', lessFileDir, null, false);
 
                     // Copy js files
                     v.copyDir('tmp/js', jsFileDir);
