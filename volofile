@@ -34,7 +34,7 @@ module.exports = {
                         file = "";
                     for(file in lessFileList) {
                         currentFile = tmpLESSPath + lessFileList[file];
-                        console.log(fs.readFileSync(currentFile));
+                        console.log(fs.readFileSync(currentFile, 'utf-8'));
                     }
 
                     // Copy the LESS files
