@@ -49,13 +49,15 @@ module.exports = {
                             currentFileContents = fs.readFileSync(currentFile, 'utf-8');
 
                             processedStr = currentFileContents.replace(regexp, newSubStr);
+                            // Write processed text back to the file
+                            fs.writeFileSync(currentFile, processedStr, 'utf-8');
                         }
                     }
 
                     console.log('Copying files....');
 
                     // Copy the LESS files
-                    v.copyDir('tmp/css', lessFileDir, null, false);
+                    v.copyDir('tmp/css', lessFileDir);
 
                     // Copy js files
                     v.copyDir('tmp/js', jsFileDir);
