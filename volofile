@@ -28,6 +28,7 @@ module.exports = {
 
                     // Before copying, we need to manipulate some strings in the files
                     // to ensure they are found and loaded inside it's new home.
+                    console.log('Rewriting file contents to fix asset paths...');
                     var lessFileList = fs.readdirSync('tmp/css/sandstone'),
                         tmpLESSPath = 'tmp/css/sandstone/',
                         file = "";
@@ -49,6 +50,8 @@ module.exports = {
                             }
                         }
                     }
+
+                    console.log('Copying files....');
 
                     // Copy the LESS files
                     v.copyDir('tmp/css', lessFileDir);
