@@ -33,16 +33,19 @@ module.exports = {
                         file = "";
 
                     for(file in lessFileList) {
-                        var currentFile = "",
-                            currentFileContents = "",
-                            needle = new RegExp('/?\bimg\b|\bfonts\b', 'im'),
-                            processedStr = "";
+                        if(lessFileList.hasOwnProperty(file)) {
+                            var currentFile = "",
+                                currentFileContents = "",
+                                needle = new RegExp('/?\bimg\b|\bfonts\b', 'gim'),
+                                processedStr = "";
 
-                        currentFile = tmpLESSPath + lessFileList[file];
-                        currentFileContents = fs.readFileSync(currentFile, 'utf-8');
+                            currentFile = tmpLESSPath + lessFileList[file];
+                            currentFileContents = fs.readFileSync(currentFile, 'utf-8');
 
-                        processedStr = currentFileContents.replace(needle, '/static/img');
-                        console.log(processedStr);
+                            console.log(needle.exec(currentFileContents));
+
+                            processedStr = currentFileContents.replace(needle, '/static/img');
+                        }
                     }
 
                     // Copy the LESS files
