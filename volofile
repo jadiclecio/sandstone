@@ -36,13 +36,11 @@ module.exports = {
                         if(lessFileList.hasOwnProperty(file)) {
                             var currentFile = "",
                                 currentFileContents = "",
-                                needle = new RegExp('/?\bimg\b|\bfonts\b', 'g'),
+                                needle = /\/?\bimg\b|\bfonts\b/g,
                                 processedStr = "";
 
                             currentFile = tmpLESSPath + lessFileList[file];
                             currentFileContents = fs.readFileSync(currentFile, 'utf-8');
-
-                            console.log(currentFileContents.match(needle));
 
                             processedStr = currentFileContents.replace(needle, '/static/img');
                         }
