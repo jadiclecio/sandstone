@@ -31,7 +31,7 @@ module.exports = {
                     var lessFileList = fs.readdirSync('tmp/css/sandstone'),
                         file = "";
                     for(file in lessFileList) {
-                        console.log(fs.readFileSync(file));
+                        console.log(fs.readFileSync(lessFileList[file]));
                     }
 
                     // Copy the LESS files
