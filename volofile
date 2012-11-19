@@ -5,7 +5,10 @@ module.exports = {
     // Install Sandstone inside a Django/Playdoh container
     install_sandstone: {
         run: function(d, v, namedArgs) {
-            var projectName = namedArgs.project;
+            var projectName = namedArgs.project,
+            // If a user has already installed sandstone but, wants to overwrite
+            // the files, they can pass force=true on the command line.
+            command = namedArgs.force ? 'add -f' : 'add';
 
             if(!projectName) {
                 console.log('Please specify you project name using the project=name argument');
@@ -16,7 +19,7 @@ module.exports = {
                 console.log('\nSandstone installed\n');
             }
 
-            v.command('add', 'ossreleasefeed/Sandstone', 'tmp')
+            v.command(command, 'ossreleasefeed/Sandstone', 'tmp')
                 .then(function() {
                     var projectBase = projectName + '/base/',
                         templateDir = projectBase + 'templates/',
