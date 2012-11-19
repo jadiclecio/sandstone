@@ -37,6 +37,7 @@ module.exports = {
                         if(lessFileList.hasOwnProperty(file)) {
                             var currentFile = "",
                                 currentFileContents = "",
+                                // We want to match only /img, img, /fonts or fonts
                                 regexp = /\/?\bimg\b|\bfonts\b/g,
                                 newSubStr = lessFileList[file] === 'fonts.less' ? 'static/fonts' : '/static/img';
                                 processedStr = "";
@@ -45,9 +46,6 @@ module.exports = {
                             currentFileContents = fs.readFileSync(currentFile, 'utf-8');
 
                             processedStr = currentFileContents.replace(regexp, newSubStr);
-                            if(lessFileList[file] === 'fonts.less') {
-                                console.log(processedStr);
-                            }
                         }
                     }
 
