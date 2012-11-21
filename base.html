@@ -17,6 +17,7 @@
         {% compress css %}
         <link rel="stylesheet" type="text/less" href="{{ static('css/sandstone/sandstone-resp.less') }}" media="screen" />
         {% endcompress %}
+        {% block site_css %}{% endblock %}
 
         {% block extrahead %}{% endblock %}
     </head>
