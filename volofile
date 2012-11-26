@@ -5,8 +5,18 @@ module.exports = {
     // Install Sandstone inside a Django/Playdoh container
     install_sandstone: {
         run: function(d, v, namedArgs) {
-            console.log(namedArgs);
-            var projectName = namedArgs.project;
+            var projectName = namedArgs.project,
+            icludeBase = true;
+
+            // If a user wishes to upgrade their assets but, not overwrite
+            // their base.html template, they can pass base=skip on the
+            // command line and that step will be skipped.
+            if(typeof namedArgs.base !== undefined) {
+                // To gaurd against accidental overwrite of the base template,
+                // we here ensure that the value pased to the base argument is
+                // indeed 'skip'.
+                icludeBase = namedArgs.base === 'skip' ? false : includeBase;
+            }
 
             if(!projectName) {
                 console.log('Please specify you project name using the project=name argument');
@@ -68,8 +78,10 @@ module.exports = {
                     // Copy images
                     v.copyDir('tmp/img', imgFilesDir);
 
-                    // Copy base template
-                    v.copyFile('tmp/base.html', templateDir + 'base.html');
+                    if(icludeBase) {
+                        // Copy base template
+                        v.copyFile('tmp/base.html', templateDir + 'base.html');
+                    }
 
                     // Remove the temporary files
                     v.rm('tmp');
