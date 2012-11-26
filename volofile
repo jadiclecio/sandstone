@@ -78,7 +78,7 @@ module.exports = {
                     // Copy images
                     v.copyDir('tmp/img', imgFilesDir);
 
-                    if(icludeBase) {
+                    if(includeBase) {
                         // Copy base template
                         v.copyFile('tmp/base.html', templateDir + 'base.html');
                     }
