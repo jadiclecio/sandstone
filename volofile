@@ -5,6 +5,7 @@ module.exports = {
     // Install Sandstone inside a Django/Playdoh container
     install_sandstone: {
         run: function(d, v, namedArgs) {
+            console.log(namedArgs);
             var projectName = namedArgs.project;
 
             if(!projectName) {
