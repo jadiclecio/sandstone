@@ -91,4 +91,25 @@ module.exports = {
                 .then(d.resolve, d.reject);
         }
     }
+    add_sandstone: {
+        run: function(d, v, namedArgs) {
+
+            var folderName = namedArgs.folder;
+
+            if(!folderName) {
+                console.log('Please specify you project name using the project=name argument');
+                return;
+            }
+
+            function finished_message() {
+                console.log('\nSandstone installed\n');
+            }
+
+            v.command('add', 'ossreleasefeed/Sandstone', folderName)
+                .then(function() {
+                    finished_message();
+                })
+                .then(d.resolve, d.reject);
+        }
+    }
 };
