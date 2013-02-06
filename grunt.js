@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         less: {
             sandstone: {
                 files: {
-                    'css/sandstone-resp.css' : 'css/sandstone/sandstone-resp.less'
+                    'css/sandstone/sandstone-resp.css' : 'css/sandstone/sandstone-resp.less'
                 }
             },
             sandstone_prod: {
@@ -12,7 +12,7 @@ module.exports = function(grunt) {
                     compress: true
                 },
                 files: {
-                    'css/sandstone-resp.min.css' : 'css/sandstone/sandstone-resp.less'
+                    'css/sandstone/sandstone-resp.min.css' : 'css/sandstone/sandstone-resp.less'
                 }
             }
         },
