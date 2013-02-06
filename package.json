@@ -1,11 +1,11 @@
 {
   "name": "sandstone",
-  "description": "Bootstrap for static sites in the Mozilla universe",
+  "description": "Bootstrap for sites using the Mozilla sandstone theme",
   "author": "espressive <sneethling@mozilla.com>",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "devDependencies": {
     "grunt-contrib-less": ">=0.3.x",
-    "grunt-css": ">=0.2.x"
+    "grunt-css": ">=0.3.x"
   },
-  "engine": "node >= 0.6.12"
+  "engine": "node >= 0.8.x"
 }

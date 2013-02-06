@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path = require('path');
+var process = require('process');
 
 module.exports = {
     // Install Sandstone inside a Django/Playdoh container
@@ -91,10 +92,12 @@ module.exports = {
                 .then(d.resolve, d.reject);
         }
     },
+    // Add sandstone to a specific folder
     add_sandstone: {
         run: function(d, v, namedArgs) {
 
-            var folderName = namedArgs.folder;
+            var folderName = namedArgs.folder,
+                addGrunt = namedArgs.grunt;
 
             if(!folderName) {
                 console.log('Please specify your folder name using the folder=name argument');
@@ -121,6 +124,12 @@ module.exports = {
 
                     // Copy images
                     v.copyDir('tmp/img', folderName + '/img');
+
+                    // Does the user want to add Grunt?
+                    if(addGrunt) {
+                        v.copyFile(tmp/grunt.js, process.cwd());
+                        v.copyFile(tmp/package.json, process.cwd());
+                    }
 
                     // Remove the temporary files
                     v.rm('tmp');
