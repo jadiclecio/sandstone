@@ -126,8 +126,8 @@ module.exports = {
 
                     // Does the user want to add Grunt?
                     if(addGrunt) {
-                        v.copyFile(tmp/grunt.js, process.cwd());
-                        v.copyFile(tmp/package.json, process.cwd());
+                        v.copyFile('tmp/grunt.js', process.cwd());
+                        v.copyFile('tmp/package.json', process.cwd());
                     }
 
                     // Remove the temporary files
