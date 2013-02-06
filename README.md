@@ -32,7 +32,7 @@ You may be required to use sudo but, in most cases it will be optional.
 
 ## For static sites ##
 
-Inside the directory you wish to create your project:
+Inside your project's root directory:
 
     volo add ossreleasefeed/Sandstone#volofile
 

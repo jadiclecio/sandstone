@@ -95,8 +95,8 @@ module.exports = {
     add_sandstone: {
         run: function(d, v, namedArgs) {
 
-            var folderName = namedArgs.folder,
-                addGrunt = namedArgs.grunt;
+            var folderName = namedArgs.folder ? namedArgs.folder : process.cwd(),
+                addGrunt = namedArgs.grunt ? namedArgs.grunt : false;
 
             if(!folderName) {
                 console.log('Please specify your folder name using the folder=name argument');
@@ -129,6 +129,9 @@ module.exports = {
                         v.copyFile('tmp/grunt.js', process.cwd() + '/grunt.js');
                         v.copyFile('tmp/package.json', process.cwd() + '/package.json');
                     }
+
+                    // Add .gitignore with default exclusions
+                    v.copyFile('tmp/.gitignore', process.cwd() + '/.gitignore');
 
                     // Remove the temporary files
                     v.rm('tmp');
