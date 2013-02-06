@@ -97,7 +97,7 @@ module.exports = {
             var folderName = namedArgs.folder;
 
             if(!folderName) {
-                console.log('Please specify you project name using the project=name argument');
+                console.log('Please specify your folder name using the folder=name argument');
                 return;
             }
 
@@ -105,8 +105,26 @@ module.exports = {
                 console.log('\nSandstone installed\n');
             }
 
-            v.command('add', 'ossreleasefeed/Sandstone', folderName)
+            v.command('add', 'ossreleasefeed/Sandstone', 'tmp')
                 .then(function() {
+
+                    console.log('Copying files....');
+
+                    // Copy the LESS files
+                    v.copyDir('tmp/css', folderName);
+
+                    // Copy js files
+                    v.copyDir('tmp/js', folderName);
+
+                    // Copy fonts
+                    v.copyDir('tmp/fonts', folderName);
+
+                    // Copy images
+                    v.copyDir('tmp/img', folderName);
+
+                    // Remove the temporary files
+                    v.rm('tmp');
+
                     finished_message();
                 })
                 .then(d.resolve, d.reject);
