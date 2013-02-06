@@ -12,6 +12,7 @@ You will currently need to following prerequisites installed:
 
 * [Nodejs][nodejs]
 * [LESS][less]
+* [Volo][volo]
 
 To intall the LESS preprocessor run the following after installing Nodejs
 
@@ -31,11 +32,19 @@ You may be required to use sudo but, in most cases it will be optional.
 
 ## For static sites ##
 
-Inside the directory you wish to create your project clone Sandstone:
+Inside the directory you wish to create your project:
 
-    git clone git@github.com:ossreleasefeed/Sandstone.git yourprojectname
+    volo add ossreleasefeed/Sandstone#volofile
 
-Once completed, change directory into your project folder and run:
+Once the above completed, you can add sandstone using the add_sandstone volo target. The
+target has two optional arguments:
+
+* folder The folder into which you want sandstone installed [DEFAULT: current directory]
+* grunt Whether you want to add Grunt [DEFAULT: false]
+
+    volo add_sandstone folder=target_folder grunt=true
+
+Once completed run:
 
     npm install
 
@@ -92,6 +101,7 @@ js folder.
 
 [nodejs]: http://nodejs.org
 [less]: https://github.com/cloudhead/less.js
+[volo]: https://github.com/volojs/volo
 [grunt]: http://github.com/cowboy/grunt
 [sandstone]: http://www.mozilla.org/en-US/styleguide/
 
