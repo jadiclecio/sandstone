@@ -90,7 +90,7 @@ module.exports = {
                 })
                 .then(d.resolve, d.reject);
         }
-    }
+    },
     add_sandstone: {
         run: function(d, v, namedArgs) {
 
