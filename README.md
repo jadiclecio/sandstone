@@ -36,7 +36,7 @@ Inside the directory you wish to create your project:
 
     volo add ossreleasefeed/Sandstone#volofile
 
-Once the above completed, you can add sandstone using the add_sandstone volo target. The
+Once the above has completed, you can add sandstone using the add_sandstone volo target. The
 target has two optional arguments:
 
 * folder The folder into which you want sandstone installed [DEFAULT: current directory]
