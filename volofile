@@ -95,13 +95,10 @@ module.exports = {
     add_sandstone: {
         run: function(d, v, namedArgs) {
 
+            // Both of the command line params are optional so, fallback to defaults
+            // as appropriate.
             var folderName = namedArgs.folder ? namedArgs.folder : process.cwd(),
                 addGrunt = namedArgs.grunt ? namedArgs.grunt : false;
-
-            if(!folderName) {
-                console.log('Please specify your folder name using the folder=name argument');
-                return;
-            }
 
             function finished_message() {
                 console.log('\nSandstone installed\n');
