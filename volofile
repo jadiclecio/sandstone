@@ -111,16 +111,16 @@ module.exports = {
                     console.log('Copying files....');
 
                     // Copy the LESS files
-                    v.copyDir('tmp/css', folderName);
+                    v.copyDir('tmp/css', folderName + '/css');
 
                     // Copy js files
-                    v.copyDir('tmp/js', folderName);
+                    v.copyDir('tmp/js', folderName + '/js');
 
                     // Copy fonts
-                    v.copyDir('tmp/fonts', folderName);
+                    v.copyDir('tmp/fonts', folderName + '/fonts');
 
                     // Copy images
-                    v.copyDir('tmp/img', folderName);
+                    v.copyDir('tmp/img', folderName + '/img');
 
                     // Remove the temporary files
                     v.rm('tmp');
