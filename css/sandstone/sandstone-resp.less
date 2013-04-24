@@ -28,6 +28,10 @@ body {
     position: relative;
 }
 
+#strings { /* An arbitrary container for translatable strings to use in in scripts */
+    display: none;
+}
+
 a {
     color: @linkBlue;
     text-decoration: none;
@@ -49,9 +53,10 @@ a {
 
 .sky {
     #outer-wrapper {
-        background-color: #eee;
-        background-image: url(/media/img/sandstone/bg-sky.png);
-        background-repeat: repeat-x;
+        background: #eee url(/media/img/sandstone/grain.png) repeat;
+        background: url(/media/img/sandstone/bg-gradient-sky.png) repeat-x 0 0,
+                    url(/media/img/sandstone/grain.png) repeat 0 0,
+                    #eee;
     }
 
     a {
@@ -238,6 +243,7 @@ img {
 textarea,
 input[type=email],
 input[type=password],
+input[type=search],
 input[type=text] {
     height: @baseLine;
     background: #fff;
@@ -258,6 +264,7 @@ textarea { height: auto; }
 textarea:focus,
 input[type=email]:focus,
 input[type=password]:focus,
+input[type=search]:focus,
 input[type=text]:focus,
 input.focus {
     border-color: #42a4e0;
@@ -285,9 +292,13 @@ input.focus {
     input[type=email],
     input[type=password],
     input[type=text] {
-        border-color: rgb(175,50,50);
-        @shadow: 0 2px 1px rgba(0,0,0,0.1) inset, 0 0 8px 0 rgba(175,50,50,.6);
-        .box-shadow(@shadow);
+        .form-field-error;
+    }
+}
+
+input[type=email], input[type=password], input[type=text] {
+    &.error {
+        .form-field-error;
     }
 }
 
@@ -321,6 +332,19 @@ input.focus {
     }
 }
 
+label.error {
+    .open-sans;
+    font-size: 12px;
+    color: rgb(175,50,50);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.super-priority-field {
+    display: none;
+    visibility: hidden;
+}
+
 /* }}} */
 /* {{{ Layout */
 
@@ -330,11 +354,11 @@ input.focus {
 }
 
 .main-column {
-    .span(6);
+    .span(7);
 }
 
 .sidebar {
-    .span(2);
+    .span(3);
     .offset(2);
 }
 
@@ -367,7 +391,6 @@ input.focus {
     .clearfix;
 }
 /* }}} */
-
 /* {{{ Header Nav */
 #masthead {
 
@@ -497,6 +520,12 @@ nav.menu-bar {
 .table {
     border-collapse: collapse;
     border-spacing: 0;
+    caption {
+        text-align:left;
+        padding-bottom:1px; /* fix to get it to look nice in many browsers */
+        margin-bottom:-1px;
+        width:100%;
+    }
     th,
     td {
         border-top: 1px solid rgba(0,0,0,0.2);
@@ -573,7 +602,6 @@ nav.menu-bar {
 
     h3 {
         .span(4);
-        padding-top: 4px;
     }
 
     .form-contents {
@@ -585,7 +613,7 @@ nav.menu-bar {
     }
 
     .field {
-        padding: 4px 0;
+        padding: 0 0 8px 0;
     }
 
     select {
@@ -594,11 +622,6 @@ nav.menu-bar {
 
     input[type=email] {
         width: 80%;
-        margin-top: 2px;
-    }
-
-    input[type=submit] {
-        font-size: 18px;
     }
 
     .field-privacy {
@@ -724,12 +747,17 @@ nav.menu-bar {
         width: @widthTablet - (@gridGutterWidth * 2);
     }
 
+    .main-column {
+        .span_narrow(8);
+    }
+
     nav.menu-bar {
         font-size: .9375em;
     }
 
     .sidebar {
-        .offset(0);
+        .span_narrow(3);
+        .offset_narrow(1);
     }
 
     #footer-email-form {
@@ -791,6 +819,7 @@ nav.menu-bar {
     .sidebar {
         padding-left: 0;
         padding-right: 0;
+        .span-all();
     }
 
     .row {
@@ -868,6 +897,9 @@ nav.menu-bar {
         font-size: 14px;
     }
 
+    dl dt {
+        font-size: 24px;
+    }
 
     nav.menu-bar {
         text-align: inherit;
@@ -948,7 +980,8 @@ nav.menu-bar {
             border: 0;
         }
 
-        #nav-main-menu a {
+        #nav-main-menu a,
+        #nav-main-menu b {
             cursor: pointer;
             display: block;
             text-transform: none;
@@ -1065,8 +1098,6 @@ nav.menu-bar {
 
 }
 /* }}} */
-
-
 
 // Don't display the dynamic platform images when js is disabled
 // because the ones in the noscript tag will be shown
