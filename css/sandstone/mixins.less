@@ -79,7 +79,7 @@
     background-image: -webkit-radial-gradient(@posX @posY, @shape @size, @startColor, @endColor);
     background-image: -o-radial-gradient(@posX @posY, @shape @size, @startColor, @endColor);
     background-image: radial-gradient(@posX @posY, @shape @size, @startColor, @endColor);
-}
+  }
 }
 
 
@@ -163,6 +163,13 @@
     @shadow:  @shadowPartBottom,
               @shadowPartBottomInset,
               inset 0px 12px 24px 2px saturate(@color, 10%);
+    .box-shadow(@shadow);
+}
+
+.button-focus-box-shadow(@color: #ffffff) {
+    @shadow:  @shadowPartBottom,
+              @shadowPartBottomInset,
+              0 0 0 2px fade(@color, 40%);
     .box-shadow(@shadow);
 }
 
