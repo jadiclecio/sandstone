@@ -2,7 +2,7 @@
   "name": "sandstone",
   "description": "Bootstrap for sites using the Mozilla sandstone theme",
   "author": "espressive <sneethling@mozilla.com>",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "repository" : {
     "type" : "git",
     "url" : "git@github.com:ossreleasefeed/Sandstone.git"
@@ -12,7 +12,7 @@
     "grunt-cli": "0.1.9",
     "grunt-contrib-jshint": "0.7.x",
     "grunt-contrib-less": "0.8.x",
-    "grunt-css": "o.5.4"
+    "grunt-css": "0.5.4"
   },
   "engine": "node >= 0.10.x",
   "volo": {
