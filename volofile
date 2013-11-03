@@ -116,10 +116,10 @@ module.exports = {
                     v.copyDir('tmp/js', folderName + '/js');
 
                     // Copy fonts
-                    v.copyDir('tmp/fonts', folderName + '/fonts');
+                    v.copyDir('tmp/media/fonts', folderName + '/fonts');
 
                     // Copy images
-                    v.copyDir('tmp/img', folderName + '/img');
+                    v.copyDir('tmp/media/img', folderName + '/img');
 
                     // Does the user want to add Grunt?
                     if(addGrunt) {
