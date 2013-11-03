@@ -2,12 +2,19 @@
   "name": "sandstone",
   "description": "Bootstrap for sites using the Mozilla sandstone theme",
   "author": "espressive <sneethling@mozilla.com>",
-  "version": "0.2.0",
-  "devDependencies": {
-    "grunt-contrib-less": ">=0.3.x",
-    "grunt-css": ">=0.3.x"
+  "version": "0.5.0",
+  "repository" : {
+    "type" : "git",
+    "url" : "git@github.com:ossreleasefeed/Sandstone.git"
   },
-  "engine": "node >= 0.8.x",
+  "devDependencies": {
+    "grunt": "0.4.1",
+    "grunt-cli": "0.1.9",
+    "grunt-contrib-jshint": "0.7.x",
+    "grunt-contrib-connect": ">=0.5.x",
+    "grunt-contrib-qunit": ">=0.3.x"
+  },
+  "engine": "node >= 0.10.x",
   "volo": {
     "baseDir": ".",
     "ignore": ["tests"]
