@@ -131,7 +131,7 @@ module.exports = {
                     v.copyFile('tmp/.gitignore', process.cwd() + '/.gitignore');
 
                     // Copy base template
-                    v.copyFile('tmp/index.html', '/index.html');
+                    v.copyFile('tmp/index.html', 'index.html');
 
                     // Remove the temporary files
                     v.rm('tmp');
