@@ -2,7 +2,7 @@
   "name": "sandstone",
   "description": "Bootstrap for sites using the Mozilla sandstone theme",
   "author": "espressive <sneethling@mozilla.com>",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "repository" : {
     "type" : "git",
     "url" : "git@github.com:ossreleasefeed/Sandstone.git"
