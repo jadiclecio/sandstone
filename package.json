@@ -7,5 +7,9 @@
     "grunt-contrib-less": ">=0.3.x",
     "grunt-css": ">=0.3.x"
   },
-  "engine": "node >= 0.8.x"
+  "engine": "node >= 0.8.x",
+  "volo": {
+    "baseDir": ".",
+    "ignore": ["tests"]
+  }
 }
