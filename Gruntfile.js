@@ -16,10 +16,8 @@ module.exports = function(grunt) {
                 }
             }
         },
-        lint: {
-            files: ['grunt.js', 'js/*.js']
-        },
         jshint: {
+            files: ['grunt.js', 'js/*.js'],
             options: {
                 bitwise: true,
                 camelcase: true,
@@ -55,10 +53,11 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-jshint')
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-css');
 
     grunt.registerTask('default', 'less:sandstone');
-    grunt.registerTask('lintify', 'lint csslint');
+    grunt.registerTask('lintify', ['jshint', 'csslint']);
     grunt.registerTask('prep_prod', 'less:sandstone lintify less:sandstone_prod');
 };
