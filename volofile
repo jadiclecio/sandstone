@@ -29,7 +29,7 @@ module.exports = {
 
             v.command('add', 'ossreleasefeed/Sandstone', 'tmp')
                 .then(function() {
-                    var templateDir = projectName + 'templates/',
+                    var templateDir = projectName + 'templates/' + projectName + '/',
                         projectStatic = projectName + '/static/',
                         lessFileDir = projectStatic + 'css',
                         jsFileDir = projectStatic + 'js',
