@@ -73,10 +73,29 @@ Once the above completes, run the following command:
 
     volo install_sandstone project=yourprojectsname
 
+NOTE: Sandstone no longer assume that you project structure is one of projectname/base so, if your project follows
+this convention, you need to call install_sandstone as follows:
+
+volo install_sandstone project=yourprojectsname/base
+
+If you do not specify it as such, the file structure you will end up with will be:
+
+    projectname
+    -- css
+    -- js
+    -- fonts
+    -- img
+    -- templates/base.html # if you did not specify base=skip
+
 While you wait, volo will do it's magic and grab the latest from the Sandstone repo and then, using the
 volofile from before, copy all of the resources you need into the projectname/base/static directory. It
 will also add a new base.html template file to your projectname/templates directory you can then extend
 to create your template views.
+
+If you have previously run install_sandstone and simply want to update without overwriting you base.html
+template, call install_sandstone as follows:
+
+    volo install_sandstone project=yourprojectsname base=skip
 
 When done, the tmp directory will be removed.
 
@@ -104,4 +123,3 @@ js folder.
 [volo]: https://github.com/volojs/volo
 [grunt]: http://github.com/cowboy/grunt
 [sandstone]: http://www.mozilla.org/en-US/styleguide/
-

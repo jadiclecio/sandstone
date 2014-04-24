@@ -5,7 +5,7 @@ module.exports = {
     // Install Sandstone inside a Django/Playdoh container
     install_sandstone: {
         run: function(d, v, namedArgs) {
-            var projectName = namedArgs.project,
+            var projectName = namedArgs.project + '/',
             includeBase = true;
 
             // If a user wishes to upgrade their assets but, not overwrite
@@ -29,9 +29,8 @@ module.exports = {
 
             v.command('add', 'ossreleasefeed/Sandstone', 'tmp')
                 .then(function() {
-                    var projectBase = projectName + '/base/',
-                        templateDir = projectBase + 'templates/',
-                        projectStatic = projectBase + '/static/',
+                    var templateDir = projectName + 'templates/',
+                        projectStatic = projectName + '/static/',
                         lessFileDir = projectStatic + 'css',
                         jsFileDir = projectStatic + 'js',
                         fontFilesDir = projectStatic + 'fonts',
