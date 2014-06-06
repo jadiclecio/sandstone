@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html class="windows no-js" lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" media="screen" />
+
+    <!--[if lte IE 8]>
+    <script src="[YOUR_ASSET_FOLDER]/js/libs/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="./css/sandstone/sandstone-resp.css" media="screen" />
+    <title>Sandstone documentation</title>
+  </head>
+
+  <body class="stone">
+    <div id="outer-wrapper">
+      <div id="wrapper">
+        <header id="masthead">
+          <a href="http://www.mozilla.org/" id="tabzilla">Mozilla</a>
+          <nav id="nav-main" role="menubar">
+            <span class="toggle" role="button" aria-controls="nav-main-menu" tabindex="0">Menu</span>
+            <ul role="menu" id="nav-main-menu">
+              <li role="menuitem" class="first"><a href="//www.mozilla.org/en-US/mission/">Mission</a></li>
+              <li role="menuitem"><a href="//www.mozilla.org/en-US/about/">About</a></li>
+              <li role="menuitem"><a href="//www.mozilla.org/en-US/products/">Products</a></li>
+              <li role="menuitem" class="last"><a href="//www.mozilla.org/en-US/contribute/">Get Involved</a></li>
+            </ul>
+          </nav>
+          <h2><a href="//mozilla.org/"><img src="./media/img/sandstone/header-mozilla-stone.png" alt="mozilla"></a></h2>
+        </header>
+
+        <hgroup class="billboard huge">
+          <h1>Sandstone</h1>
+          <h2>
+            Mozilla Sandstone theme for site bootstrapping
+          </h2>
+        </hgroup>
+        
+        <h2>Overview</h2>
+
+        <div class="container">
+          <p>
+            This is the documentation for the <a href="//github.com/ossreleasefeed/Sandstone">Sandstone
+            theme</a> project. This is a collection of files that provides a
+            <a href="http://getbootstrap">Bootstrap</a>-like style
+            framework to make it easier to use Sandstone on new sites.
+          </p>
+          <dl>
+            <dt>Source</dt>
+            <dd><a href="https://github.com/ossreleasefeed/Sandstone">github.com/ossreleasefeed/Sandstone</a></dd>
+
+            <dt>Issues</dt>
+            <dd><a href="https://github.com/ossreleasefeed/Sandstone/issues">github.com/ossreleasefeed/Sandstone/issues</a></dd>
+
+            <dt>License</dt>
+            <dd>???</dd>
+
+            <dt>Sandstone style guide</dt>
+            <dd><a href="http://www.mozilla.org/en-US/styleguide/websites/sandstone/">http://www.mozilla.org/en-US/styleguide/websites/sandstone/</a></dd>
+          </dl>
+        </div>
+        
+
+        <h2>Skeleton</h2>
+
+        <div class="container">
+          <p>
+            Here's a rough header:
+          </p>
+
+          <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html class="windows no-js" lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;meta charset="utf-8" /&gt;
+
+    &lt;link rel="shortcut icon" href="img/favicon.ico" /&gt;
+    &lt;link rel="stylesheet" type="text/css" href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" media="screen" /&gt;
+
+    &lt;!--[if lte IE 8]&gt;
+    &lt;script src="[YOUR_ASSET_FOLDER]/js/libs/html5shiv.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;link rel="stylesheet" type="text/css" href="/css/sandstone/sandstone-resp.css" media="screen" /&gt;
+    &lt;title&gt;YOUR TITLE HERE&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body class="stone"&gt;
+    &lt;div id="outer-wrapper"&gt;
+      &lt;div id="wrapper"&gt;
+
+          </pre>
+
+          <p>
+            Here's a rough footer:
+          </p>
+
+          <pre>
+      &lt;footer id="colophon"&gt;
+        &lt;div class="row"&gt;
+          &lt;div class="footer-logo"&gt;
+            &lt;a href="//mozilla.org"&gt;&lt;img src="./media/img/sandstone/footer-mozilla.png" alt="mozilla"&gt;&lt;/a&gt;
+          &lt;/div&gt;
+          
+          &lt;div class="footer-license"&gt;
+            &lt;p&gt;Portions of this content are &copy;1998–2012 by individual mozilla.org contributors.
+            Content available under a
+            &lt;a href="//www.mozilla.org/foundation/licensing/website-content.html"&gt;Creative Commons
+            license&lt;/a&gt;.&lt;/p&gt;
+            &lt;p&gt;&lt;a href="//mozilla.org/b/en-US/contribute/page/"&gt;Contribute to this page&lt;/a&gt;&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;ul class="footer-nav"&gt;
+            &lt;li&gt;&lt;a href="//mozilla.org/about/contact.html#map-mountain_view"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="//mozilla.org/privacy-policy.html"&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="//mozilla.org/about/legal.html"&gt;Legal Notices&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="//mozilla.org/legal/fraud-report/index.html"&gt;Report Trademark Abuse&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+          
+          &lt;ul class="footer-nav"&gt;
+            &lt;li&gt;&lt;a href="http://twitter.com/firefox"&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="http://facebook.com/Firefox"&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="https://affiliates.mozilla.org/"&gt;Firefox Affiliates&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/footer&gt;
+    &lt;/div&gt;
+    &lt;script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"&gt;&lt;/script&gt;
+    &lt;script src="/js/site.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </pre>
+        </div>
+
+        <h2>Layout</h2>
+
+        <div class="container">
+          <div class="row">
+            <div class="span1">span1</div>
+            <div class="span1">span1</div>
+            <div class="span1">span1</div>
+            <div class="span1">span1</div>
+            <div class="span1">span1</div>
+            <div class="span1">span1</div>
+            <div class="span1">span1</div>
+            <div class="span1">span1</div>
+            <div class="span1">span1</div>
+            <div class="span1">span1</div>
+            <div class="span1">span1</div>
+            <div class="span1">span1</div>
+          </div>
+          <div class="row">
+            <div class="span2">span2</div>
+            <div class="span2">span2</div>
+            <div class="span2">span2</div>
+            <div class="span2">span2</div>
+            <div class="span2">span2</div>
+            <div class="span2">span2</div>
+          </div>
+          <div class="row">
+            <div class="span3">span3</div>
+            <div class="span3">span3</div>
+            <div class="span3">span3</div>
+            <div class="span3">span3</div>
+          </div>
+        </div>
+
+        <h2>Buttons</h2>
+
+        <section class="container">
+          <div class="sidebar">
+            <h3>Download buttons</h3>
+            <p>
+              These buttons are used for downloads.
+            </p>
+          </div>
+
+          <div class="main-column">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>CSS</th>
+                  <th>Button</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>
+                      &lt;button class="button-green"&gt;
+                    </code>
+                  </td>
+                  <td>
+                    <button class="button-green">download</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="container">
+          <div class="sidebar">
+            <h3>Standard buttons</h3>
+            <p>
+              These are standard buttons. Always blue.
+            </p>
+          </div>
+
+          <div class="main-column">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>CSS</th>
+                  <th>Button</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>
+                      &lt;button class="button"&gt;
+                    </code>
+                  </td>
+                  <td>
+                    <button class="button">default</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>
+                      &lt;button class="button hover"&gt;
+                    </code>
+                  </td>
+                  <td>
+                    <button class="button hover">hover</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>
+                      &lt;button class="button active"&gt;
+                    </code>
+                  </td>
+                  <td>
+                    <button class="button active">active</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>
+                      &lt;button class="button insensitive"&gt;
+                    </code>
+                  </td>
+                  <td>
+                    <button class="button insensitive">insensitive</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </section>
+
+        <section class="container">
+          <div class="sidebar">
+            <h3>User flow buttons</h3>
+            <p>
+              These are user flow buttons.
+            </p>
+          </div>
+
+          <div class="main-column">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>CSS</th>
+                  <th>Button</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>
+                      &lt;button class="button"&gt;
+                    </code>
+                  </td>
+                  <td>
+                    <button class="button">next</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>
+                      &lt;button class="button-negative"&gt;
+                    </code>
+                  </td>
+                  <td>
+                    <button class="button-negative">no</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <h2>Colors</h2>
+
+        <h2>Forms</h2>
+
+        <h2>Grids</h2>
+
+        <h2>Tables and lists</h2>
+
+        <section class="container">
+          <div class="sidebar">
+            <h3>Tables</h3>
+            <p>
+              Tables are nice.
+            </p>
+          </div>
+
+          <div class="main-column">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Screen format</th>
+                  <th>Width</th>
+                  <th>Column</th>
+                  <th>Gutter</th>
+                  <th># of col.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Smartphone (vert.)</td>
+                  <td>320px</td>
+                  <td>40px</td>
+                  <td>20px</td>
+                  <td>5 col</td>
+                </tr>
+                <tr>
+                  <td>Smartphone (horiz.)</td>
+                  <td>480px</td>
+                  <td colspan="3">fluid expansion of smartphone</td>
+                </tr>
+                <tr>
+                  <td>Tablet</td>
+                  <td>768px</td>
+                  <td>40px</td>
+                  <td>20px</td>
+                  <td>12 col</td>
+                </tr>
+                <tr>
+                  <td>Desktop</td>
+                  <td>990px</td>
+                  <td>60px</td>
+                  <td>20px</td>
+                  <td>12 col</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="container">
+          <div class="sidebar">
+            <h3>Lists</h3>
+            <p>
+              Lists are the best.
+            </p>
+          </div>
+
+          <div class="main-column">
+            <p>
+              Unordered
+            </p>
+
+            <ul>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Integer molestie lorem</li>
+              <li>Facilisis in pretium nisl</li>
+              <li>Nulla volutpat aliquam velit
+                <ul>
+                  <li>Phasellus iaculis neque</li>
+                  <li>Purus sodales ultricies</li>
+                  <li>Vestibulum laoreet</li>
+                </ul>
+              </li>
+              <li>Ac tristique libero volutpat at</li>
+              <li>Faucibus porta lacus</li>
+            </ul>
+
+            <p>
+              Unstyled
+            </p>
+
+            <ul class="unstyled">
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Integer molestie lorem</li>
+              <li>Facilisis in pretium nisl</li>
+              <li>Nulla volutpat aliquam velit
+                <ul>
+                  <li>Phasellus iaculis neque</li>
+                  <li>Purus sodales ultricies</li>
+                  <li>Vestibulum laoreet</li>
+                </ul>
+              </li>
+              <li>Ac tristique libero volutpat at</li>
+              <li>Faucibus porta lacus</li>
+            </ul>
+
+            <p>
+              Ordered
+            </p>
+
+            <ol>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Integer molestie lorem</li>
+              <li>Facilisis in pretium nisl</li>
+              <li>Nulla volutpat aliquam velit</li>
+              <li>Phasellus iaculis neque</li>
+              <li>Purus sodales ultricies</li>
+              <li>Vestibulum laoreet</li>
+              <li>Ac tristique libero volutpat at</li>
+              <li>Faucibus porta lacus</li>
+            </ol>
+          </div>
+        </section>
+
+        <h2>Tabzilla</h2>
+
+        <h2>Typefaces</h2>
+      </div>
+
+      <footer id="colophon">
+        <div class="row">
+          <div class="footer-logo">
+            <a href="//mozilla.org"><img src="./media/img/sandstone/footer-mozilla.png" alt="mozilla"></a>
+          </div>
+          
+          <div class="footer-license">
+            <p>
+              Portions of this content are &copy;1998–2014 by individual mozilla.org contributors.
+              Content available under a <a href="//www.mozilla.org/foundation/licensing/website-content.html">Creative 
+              Commons license</a>.
+            </p>
+            <p><a href="//mozilla.org/b/en-US/contribute/page/">Contribute to this page</a></p>
+          </div>
+          <ul class="footer-nav">
+            <li><a href="//mozilla.org/about/contact.html#map-mountain_view">Contact Us</a></li>
+            <li><a href="//mozilla.org/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="//mozilla.org/about/legal.html">Legal Notices</a></li>
+            <li><a href="//mozilla.org/legal/fraud-report/index.html">Report Trademark Abuse</a></li>
+          </ul>
+          
+          <ul class="footer-nav">
+            <li><a href="http://twitter.com/firefox">Twitter</a></li>
+            <li><a href="http://facebook.com/Firefox">Facebook</a></li>
+            <li><a href="https://affiliates.mozilla.org/">Firefox Affiliates</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>
+    <script src="./js/site.js"></script>
+  </body>
+</html>

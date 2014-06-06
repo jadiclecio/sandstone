@@ -119,6 +119,11 @@ This will run the default task which uses lessc to preprocess your .less files
 This will lint, using JSHint, your grunt file itself as well as all .js files inside the
 js folder.
 
+    grunt build_docs
+
+This will generate the Sandstone css and then copy all the relevant files into
+the docs/ directory.
+
 [nodejs]: http://nodejs.org
 [less]: https://github.com/cloudhead/less.js
 [volo]: https://github.com/volojs/volo
