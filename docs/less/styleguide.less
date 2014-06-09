@@ -1,0 +1,26 @@
+@import '../../css/sandstone/lib.less';
+
+* {
+    .border-box();
+}
+.code-sample {
+    margin: 1rem 0;
+}
+.sample-container {
+    .clearfix();
+
+    nav,
+    aside,
+    main {
+        min-height: 8rem;
+    }
+    nav,
+    aside {
+        background-color: #333;
+        .span(2);
+    }
+    main {
+        background-color: #999;
+        .span(8);
+    }
+}

@@ -7,6 +7,15 @@ module.exports = function(grunt) {
                     'css/sandstone/sandstone-resp.css' : 'css/sandstone/sandstone-resp.less'
                 }
             },
+            styleguide: {
+                options: {
+                    paths: 'css/sandstone'
+                },
+                files: {
+                    'css/sandstone/sandstone-resp.css' : 'css/sandstone/sandstone-resp.less',
+                    'docs/css/styleguide.css' : 'docs/less/styleguide.less'
+                }
+            },
             sandstone_prod: {
                 options: {
                     compress: true
@@ -57,9 +66,15 @@ module.exports = function(grunt) {
                 src: [
                     'css/sandstone/sandstone-resp.css',
                     'js/site.js',
-                    'media/*'
+                    'media/**'
                 ],
                 dest: 'docs/'
+            }
+        },
+        watch: {
+            scripts: {
+                files: ['docs/less/*.less'],
+                tasks: ['dev_docs']
             }
         }
     });
@@ -67,10 +82,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-css');
 
     grunt.registerTask('default', 'less:sandstone');
     grunt.registerTask('lintify', ['jshint', 'csslint']);
     grunt.registerTask('prep_prod', ['less:sandstone', 'lintify', 'less:sandstone_prod']);
-    grunt.registerTask('build_docs', ['less:sandstone', 'lintify', 'copy:docs']);
+    grunt.registerTask('dev_docs', ['less:styleguide', 'copy:docs']);
+    grunt.registerTask('build_docs', ['less:styleguide', 'lintify', 'copy:docs']);
 };
