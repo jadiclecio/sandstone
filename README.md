@@ -8,11 +8,12 @@ also provides the tools, via Grunt, to preprocess, lint and minify/uglify the as
 
 # Prerequisites #
 
-You will currently need to following prerequisites installed:
+You will currently need to have following prerequisites installed:
 
 * [Nodejs][nodejs]
 * [LESS][less]
 * [Volo][volo]
+* (optional) [Grunt][grunt]
 
 To intall the LESS preprocessor run the following after installing Nodejs
 
@@ -117,6 +118,11 @@ This will run the default task which uses lessc to preprocess your .less files
 
 This will lint, using JSHint, your grunt file itself as well as all .js files inside the
 js folder.
+
+    grunt build_docs
+
+This will generate the Sandstone css and then copy all the relevant files into
+the docs/ directory.
 
 [nodejs]: http://nodejs.org
 [less]: https://github.com/cloudhead/less.js

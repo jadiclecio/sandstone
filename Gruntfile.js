@@ -50,14 +50,27 @@ module.exports = function(grunt) {
                     "zero-units": 2
                 }
             }
+        },
+        copy: {
+            docs: {
+                expand: true,
+                src: [
+                    'css/sandstone/sandstone-resp.css',
+                    'js/site.js',
+                    'media/*'
+                ],
+                dest: 'docs/'
+            }
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-jshint')
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-css');
 
     grunt.registerTask('default', 'less:sandstone');
     grunt.registerTask('lintify', ['jshint', 'csslint']);
-    grunt.registerTask('prep_prod', 'less:sandstone lintify less:sandstone_prod');
+    grunt.registerTask('prep_prod', ['less:sandstone', 'lintify', 'less:sandstone_prod']);
+    grunt.registerTask('build_docs', ['less:sandstone', 'lintify', 'copy:docs']);
 };
