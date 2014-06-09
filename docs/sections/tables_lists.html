@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="windows no-js" lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>Sandstone Styleguide - Bootstrap Your Mozilla Sites</title>
+
+    <link rel="shortcut icon" href="/media/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" media="screen" />
+
+    <link rel="stylesheet" type="text/css" href="/docs/css/prism.css" media="screen" />
+
+    <link rel="stylesheet" type="text/css" href="../css/sandstone/sandstone-resp.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/styleguide.css" media="screen" />
+  </head>
+    <body class="stone">
+        <div id="outer-wrapper">
+            <div id="wrapper">
+                <header id="masthead">
+                  <a href="http://www.mozilla.org/" id="tabzilla">Mozilla</a>
+                  <nav id="nav-main" role="menubar">
+                    <span class="toggle" role="button" aria-controls="nav-main-menu" tabindex="0">Menu</span>
+                    <ul role="menu" id="nav-main-menu">
+                      <li role="menuitem" class="first"><a href="//www.mozilla.org/en-US/mission/">Mission</a></li>
+                      <li role="menuitem"><a href="//www.mozilla.org/en-US/about/">About</a></li>
+                      <li role="menuitem"><a href="//www.mozilla.org/en-US/products/">Products</a></li>
+                      <li role="menuitem" class="last"><a href="//www.mozilla.org/en-US/contribute/">Get Involved</a></li>
+                    </ul>
+                  </nav>
+                  <h2><a href="//mozilla.org/"><img src="/media/img/sandstone/header-mozilla-stone.png" alt="mozilla"></a></h2>
+                </header>
+
+                <hgroup id="main-feature" class="center">
+                    <h1>Sandstone Styleguide</h1>
+                    <h3>Bootstrap Your Mozilla Sites</h3>
+                </hgroup>
+
+                <nav class="menu-bar billboard">
+                    <ul>
+                        <li><a href="../index.html">Overview</a></li>
+                        <li><a href="sections/themes.html">Themes</a></li>
+                        <li><a href="sections/grid.html">Grid</a></li>
+                        <li><a href="sections/content.html">Content</a></li>
+                        <li><a href="sections/buttons.html">Buttons</a></li>
+                        <li><a href="sections/forms.html">Forms</a></li>
+                        <li><a href="sections/tables_lists.html">Tables &amp; Lists</a></li>
+                        <li><a href="sections/typefaces.html">Typefaces</a></li>
+                        <li><a href="sections/tabzilla.html">Tabzilla</a></li>
+                    </ul>
+                </nav>
+
+                <article>
+                    <h2>Tables &amp; Lists</h2>
+
+                    <h3>Tables</h3>
+                    <section class="sample-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Screen format</th>
+                                    <th>Width</th>
+                                    <th>Column</th>
+                                    <th>Gutter</th>
+                                    <th># of col.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Smartphone (vert.)</td>
+                                    <td>320px</td>
+                                    <td>40px</td>
+                                    <td>20px</td>
+                                    <td>5 col</td>
+                                </tr>
+                                <tr>
+                                    <td>Smartphone (horiz.)</td>
+                                    <td>480px</td>
+                                    <td colspan="3">fluid expansion of smartphone</td>
+                                </tr>
+                                <tr>
+                                    <td>Tablet</td>
+                                    <td>768px</td>
+                                    <td>40px</td>
+                                    <td>20px</td>
+                                    <td>12 col</td>
+                                </tr>
+                                <tr>
+                                    <td>Desktop</td>
+                                    <td>990px</td>
+                                    <td>60px</td>
+                                    <td>20px</td>
+                                    <td>12 col</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section class="code-sample">
+                    <h4>HTML</h4>
+<pre>
+<code class="language-markup">
+&lt;table class="table"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Screen format&lt;/th&gt;
+            &lt;th&gt;Width&lt;/th&gt;
+            &lt;th&gt;Column&lt;/th&gt;
+            &lt;th&gt;Gutter&lt;/th&gt;
+            &lt;th&gt;# of col.&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Smartphone (vert.)&lt;/td&gt;
+            &lt;td&gt;320px&lt;/td&gt;
+            &lt;td&gt;40px&lt;/td&gt;
+            &lt;td&gt;20px&lt;/td&gt;
+            &lt;td&gt;5 col&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Smartphone (horiz.)&lt;/td&gt;
+            &lt;td&gt;480px&lt;/td&gt;
+            &lt;td colspan="3"&gt;fluid expansion of smartphone&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Tablet&lt;/td&gt;
+            &lt;td&gt;768px&lt;/td&gt;
+            &lt;td&gt;40px&lt;/td&gt;
+            &lt;td&gt;20px&lt;/td&gt;
+            &lt;td&gt;12 col&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Desktop&lt;/td&gt;
+            &lt;td&gt;990px&lt;/td&gt;
+            &lt;td&gt;60px&lt;/td&gt;
+            &lt;td&gt;20px&lt;/td&gt;
+            &lt;td&gt;12 col&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+                    </section>
+
+                    <h3>Unordered list</h3>
+                    <section class="sample-container">
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipiscing elit</li>
+                            <li>Integer molestie lorem</li>
+                            <li>Facilisis in pretium nisl</li>
+                            <li>Nulla volutpat aliquam velit
+                                <ul>
+                                    <li>Phasellus iaculis neque</li>
+                                    <li>Purus sodales ultricies</li>
+                                    <li>Vestibulum laoreet</li>
+                                </ul>
+                            </li>
+                            <li>Ac tristique libero volutpat at</li>
+                            <li>Faucibus porta lacus</li>
+                        </ul>
+                    </section>
+
+                    <section class="code-sample">
+                    <h4>HTML</h4>
+<pre>
+<code class="language-markup">
+&lt;ul&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+    &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+    &lt;li&gt;Integer molestie lorem&lt;/li&gt;
+    &lt;li&gt;Facilisis in pretium nisl&lt;/li&gt;
+    &lt;li&gt;Nulla volutpat aliquam velit
+        &lt;ul&gt;
+            &lt;li&gt;Phasellus iaculis neque&lt;/li&gt;
+            &lt;li&gt;Purus sodales ultricies&lt;/li&gt;
+            &lt;li&gt;Vestibulum laoreet&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Ac tristique libero volutpat at&lt;/li&gt;
+    &lt;li&gt;Faucibus porta lacus&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+                    </section>
+
+                    <h3>Unstyled</h3>
+                    <section class="sample-container">
+                        <ul class="unstyled">
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipiscing elit</li>
+                            <li>Integer molestie lorem</li>
+                            <li>Facilisis in pretium nisl</li>
+                            <li>Nulla volutpat aliquam velit
+                                <ul>
+                                    <li>Phasellus iaculis neque</li>
+                                    <li>Purus sodales ultricies</li>
+                                    <li>Vestibulum laoreet</li>
+                                </ul>
+                            </li>
+                            <li>Ac tristique libero volutpat at</li>
+                            <li>Faucibus porta lacus</li>
+                        </ul>
+                    </section>
+
+                    <section class="code-sample">
+                    <h4>HTML</h4>
+<pre>
+<code class="language-markup">
+&lt;ul class="unstyled"&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+    &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+    &lt;li&gt;Integer molestie lorem&lt;/li&gt;
+    &lt;li&gt;Facilisis in pretium nisl&lt;/li&gt;
+    &lt;li&gt;Nulla volutpat aliquam velit
+        &lt;ul&gt;
+            &lt;li&gt;Phasellus iaculis neque&lt;/li&gt;
+            &lt;li&gt;Purus sodales ultricies&lt;/li&gt;
+            &lt;li&gt;Vestibulum laoreet&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Ac tristique libero volutpat at&lt;/li&gt;
+    &lt;li&gt;Faucibus porta lacus&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+                    </section>
+
+                    <h3>Ordered</h3>
+                    <section class="sample-container">
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipiscing elit</li>
+                            <li>Integer molestie lorem</li>
+                            <li>Facilisis in pretium nisl</li>
+                            <li>Nulla volutpat aliquam velit
+                                <ol>
+                                    <li>Phasellus iaculis neque</li>
+                                    <li>Purus sodales ultricies</li>
+                                    <li>Vestibulum laoreet</li>
+                                </ol>
+                            </li>
+                            <li>Ac tristique libero volutpat at</li>
+                            <li>Faucibus porta lacus</li>
+                        </ol>
+                    </section>
+
+                    <section class="code-sample">
+                    <h4>HTML</h4>
+<pre>
+<code class="language-markup">
+&lt;ol&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+    &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+    &lt;li&gt;Integer molestie lorem&lt;/li&gt;
+    &lt;li&gt;Facilisis in pretium nisl&lt;/li&gt;
+    &lt;li&gt;Nulla volutpat aliquam velit
+        &lt;ol&gt;
+            &lt;li&gt;Phasellus iaculis neque&lt;/li&gt;
+            &lt;li&gt;Purus sodales ultricies&lt;/li&gt;
+            &lt;li&gt;Vestibulum laoreet&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Ac tristique libero volutpat at&lt;/li&gt;
+    &lt;li&gt;Faucibus porta lacus&lt;/li&gt;
+&lt;/ol&gt;
+</code>
+</pre>
+                    </section>
+
+
+                </article>
+            </div>
+            <footer id="colophon">
+              <div class="row">
+                  <div class="footer-logo">
+                      <a href="//mozilla.org"><img src="/media/img/sandstone/footer-mozilla.png" alt="mozilla"></a>
+                  </div>
+
+                  <div class="footer-license">
+                      <p>Portions of this content are &copy;1998–2014 by individual mozilla.org contributors. Content available under a <a href="//www.mozilla.org/foundation/licensing/website-content.html">Creative Commons license</a>.</p>
+                      <p><a href="//mozilla.org/b/en-US/contribute/page/">Contribute to this page</a></p>
+                  </div>
+                  <ul class="footer-nav">
+                    <li><a href="//mozilla.org/about/contact.html#map-mountain_view">Contact Us</a></li>
+                    <li><a href="//mozilla.org/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="//mozilla.org/about/legal.html">Legal Notices</a></li>
+                    <li><a href="//mozilla.org/legal/fraud-report/index.html">Report Trademark Abuse</a></li>
+                  </ul>
+
+                  <ul class="footer-nav">
+                    <li><a href="http://twitter.com/firefox">Twitter</a></li>
+                    <li><a href="http://facebook.com/Firefox">Facebook</a></li>
+                    <li><a href="https://affiliates.mozilla.org/">Firefox Affiliates</a></li>
+                  </ul>
+              </div>
+            </footer>
+        </div>
+
+        <script src="/docs/js/libs/prism.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

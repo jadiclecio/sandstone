@@ -50,44 +50,60 @@
                 </nav>
 
                 <article>
-                    <h2>The Grid System</h2>
-                    <p>Here is how the grid system works.......</p>
+                    <h2>Buttons</h2>
+                    <p>Buttons come in three varieties: download buttons, standard buttons and user flow buttons.</p>
+                    <h3>Download buttons</h3>
 
                     <section class="sample-container">
-                        <nav></nav>
-                        <main></main>
-                        <aside></aside>
+                        <button class="button-green">download</button>
                     </section>
 
                     <section class="code-sample">
                     <h4>HTML</h4>
 <pre>
 <code class="language-markup">
-&lt;nav>Navigation&lt;/nav>
-&lt;main>Main content.&lt;/main>
-&lt;aside>Side Notes&lt;/aside>
-</code>
-</pre>
-                    <h4>CSS</h4>
-<pre>
-<code class="language-css">
-nav,
-aside,
-main {
-    min-height: 8rem;
-}
-nav,
-aside {
-    background-color: #333;
-    .span(2);
-}
-main {
-    background-color: #999;
-    .span(8);
-}
+&lt;button class="button-green"&gt;download&lt;/button&gt;
 </code>
 </pre>
                     </section>
+
+                    <h3>Standard buttons</h3>
+
+                    <section class="sample-container">
+                        <button class="button">default</button>
+                        <button class="button hover">hover</button>
+                        <button class="button active">active</button>
+                        <button class="button insensitive">insensitive</button>
+                    </section>
+
+                    <section class="code-sample">
+                    <h4>HTML</h4>
+<pre>
+<code class="language-markup">
+&lt;button class="button"&gt;default&lt;/button&gt;
+&lt;button class="button hover"&gt;hover&lt;/button&gt;
+&lt;button class="button active"&gt;active&lt;/button&gt;
+&lt;button class="button insensitive"&gt;insensitive&lt;/button&gt;
+</code>
+</pre>
+                    </section>
+
+                    <h3>User flow buttons</h3>
+                    <section class="sample-container">
+                        <button class="button">next</button>
+                        <button class="button-negative">no</button>
+                    </section>
+
+                    <section class="code-sample">
+                    <h4>HTML</h4>
+<pre>
+<code class="language-markup">
+&lt;button class="button"&gt;next&lt;/button&gt;
+&lt;button class="button-negative"&gt;no&lt;/button&gt;
+</code>
+</pre>
+                    </section>
+
                 </article>
             </div>
             <footer id="colophon">
