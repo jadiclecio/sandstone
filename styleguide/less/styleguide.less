@@ -1,0 +1,27 @@
+@import '../../css/sandstone/lib.less';
+
+* {
+    .border-box();
+}
+.code-sample {
+    margin: 1rem 0;
+}
+.grid-sample-container {
+    .one-column,
+    .three-column,
+    .six-column {
+        min-height: 8rem;
+    }
+    .one-column {
+        background-color: #333;
+        .span(1);
+    }
+    .three-column {
+        background-color: #666;
+        .span(3);
+    }
+    .six-column {
+        background-color: #999;
+        .span(6);
+    }
+}

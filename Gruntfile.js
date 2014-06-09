@@ -2,6 +2,12 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         less: {
+            styleguide: {
+                files: {
+                    'styleguide/css/sandstone/sandstone-resp.css' : 'css/sandstone/sandstone-resp.less',
+                    'styleguide/css/styleguide.css' : 'styleguide/less/styleguide.less'
+                }
+            },
             sandstone: {
                 files: {
                     'css/sandstone/sandstone-resp.css' : 'css/sandstone/sandstone-resp.less'
@@ -58,6 +64,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-css');
 
     grunt.registerTask('default', 'less:sandstone');
+    grunt.registerTask('styleguide', 'less:styleguide');
     grunt.registerTask('lintify', ['jshint', 'csslint']);
     grunt.registerTask('prep_prod', 'less:sandstone lintify less:sandstone_prod');
 };

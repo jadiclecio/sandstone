@@ -27,10 +27,10 @@
     }
 
     function init() {
-	// Add the platform as a classname on the html-element immediately to
+    // Add the platform as a classname on the html-element immediately to
     // avoid lots of flickering
-	var h = document.documentElement;
-	h.className = h.className.replace("windows", site.platform);
+    var h = document.documentElement;
+    h.className = h.className.replace("windows", site.platform);
 
         // Add class to reflect javascript availability for CSS
         h.className = h.className.replace(/\bno-js\b/,'js');

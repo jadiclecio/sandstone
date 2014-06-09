@@ -27,8 +27,8 @@
     }
 
     function init() {
-	// Add the platform as a classname on the html-element immediately to
-    // avoid lots of flickering
+	// Add the platform as a classname on the html-element immediately to avoid lots
+        // of flickering
 	var h = document.documentElement;
 	h.className = h.className.replace("windows", site.platform);
 
