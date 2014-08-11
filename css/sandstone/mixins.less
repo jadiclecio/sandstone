@@ -2,7 +2,6 @@
 // http://creativecommons.org/licenses/by/3.0/
 
 .border-radius(@radius: 0.25em) {
-  -moz-border-radius: @radius;
   border-radius: @radius;
 }
 
@@ -13,23 +12,16 @@
 }
 
 .box-shadow(@shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1)) {
-  -webkit-box-shadow: @shadow;
-  -moz-box-shadow: @shadow;
   box-shadow: @shadow;
 }
 
 .transition(@transition: all linear .25s) {
   -webkit-transition: @transition;
-  -moz-transition: @transition;
-  -o-transition: @transition;
-  -ms-transition: @transition;
   transition: @transition;
 }
 
 .transform(@transform) {
   -webkit-transform: @transform;
-  -moz-transform: @transform;
-  -o-transform: @transform;
   -ms-transform: @transform;
   transform: @transform;
 }
@@ -165,15 +157,33 @@
     .box-shadow(@shadow);
 }
 
+// Hide visually, but not to screen readers
+.visually-hidden() {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    padding: 0;
+    border: 0;
+}
+
 .hidden {
-  position: absolute;
-  left: -999em;
+    display: none;
 }
 
 .form-field-error {
   border-color: rgb(175,50,50);
   @shadow: 0 2px 1px rgba(0,0,0,0.1) inset, 0 0 8px 0 rgba(175,50,50,.6);
   .box-shadow(@shadow);
+}
+
+// not the most up to date method, but works in IE7
+.image-replaced {
+    text-indent: 120%; // extra 20% to account for fancy fonts that may overhang
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 // Add chevron character after text (with space)
