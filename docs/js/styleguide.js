@@ -7,6 +7,8 @@ $(function() {
 
         container.append(data);
 
+        Prism.highlightAll();
+
     }).fail(function(jqXHR, txtStatus, error) {
         console.log(error);
     });
@@ -22,10 +24,16 @@ $(function() {
 
             container.empty().append(data);
 
-            var html = container.find('.sample-container')[0].innerHTML;
-            var htmlCodeContainer = container.find('.language-markup');
+            var codeSampleContainers = container.find('.sample-container');
 
-            htmlCodeContainer.text(html);
+            codeSampleContainers.each(function() {
+                var container = $(this);
+                var html = container.html();
+
+                container.next('.code-sample').find('code').text(html);
+            });
+
+            Prism.highlightAll();
 
         }).fail(function(jqXHR, txtStatus, error) {
             console.log(error);
