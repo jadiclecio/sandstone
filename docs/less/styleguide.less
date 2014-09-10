@@ -1,0 +1,66 @@
+@import '../../css/sandstone/lib.less';
+
+* {
+    .border-box();
+}
+h4 {
+    margin-top: 2rem;
+}
+article {
+    padding: 0 .7rem;
+}
+dl {
+    dt {
+        font-size: 1.5rem;
+    }
+    dd {
+        margin-bottom: 1.2rem;
+    }
+}
+.container {
+    padding: 1rem 0;
+}
+.code-sample {
+    display: none;
+    margin: 1rem 0;
+    pre {
+        border: .5rem solid #e0e0e0;
+        max-height: 30rem;
+        overflow: auto;
+    }
+}
+.sample-container {
+    .clearfix();
+
+    nav,
+    aside,
+    main {
+        min-height: 8rem;
+    }
+    nav,
+    aside {
+        background-color: #333;
+        .span(2);
+    }
+    main {
+        background-color: #999;
+        .span(8);
+    }
+}
+.show {
+  display: block;
+}
+/* Form sample styles */
+.medium-field {
+    width: 50%;
+}
+.project-info,
+.date-info {
+    .span(6);
+}
+.project-info.first {
+    margin-left: 0;
+}
+.comments {
+    clear: left;
+}
