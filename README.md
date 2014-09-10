@@ -152,6 +152,10 @@ The last command will preprocess the main sandstone LESS files, startup a simple
 HTTP server, and then watch for changes made to the styleguide.less file in
 docs/less/styleguide.less
 
+Fire up your browser and point it at:
+
+    http://127.0.0.1:8000/docs/
+
 ## Adding a New Section ##
 
 If you wish to add a completely new section to the docs, here are the steps to
