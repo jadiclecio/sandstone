@@ -92,6 +92,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['less:sandstone', 'connect', 'watch']);
     grunt.registerTask('lintify', ['jshint', 'csslint']);
     grunt.registerTask('prep_prod', ['less:sandstone', 'lintify', 'less:sandstone_prod']);
-    grunt.registerTask('dev_docs', ['less:styleguide', 'copy:docs']);
+    grunt.registerTask('dev_docs', ['less:styleguide', 'copy:docs' ,'connect', 'watch']);
     grunt.registerTask('build_docs', ['less:styleguide', 'lintify', 'copy:docs']);
 };

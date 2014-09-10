@@ -24,7 +24,9 @@ dl {
     display: none;
     margin: 1rem 0;
     pre {
-        border: .5rem solid #e0e0e0
+        border: .5rem solid #e0e0e0;
+        max-height: 30rem;
+        overflow: auto;
     }
 }
 .sample-container {
@@ -47,4 +49,18 @@ dl {
 }
 .show {
   display: block;
+}
+/* Form sample styles */
+.medium-field {
+    width: 50%;
+}
+.project-info,
+.date-info {
+    .span(6);
+}
+.project-info.first {
+    margin-left: 0;
+}
+.comments {
+    clear: left;
 }
