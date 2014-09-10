@@ -165,10 +165,13 @@ follow:
 * Link to this section in docs/index.html under the nav element. NB! Ensure that
 the href of the link, matches that of the file you created in step 1, for example:
 
+    ```html
     <li><a href="new_section.html">This Can Be Anything</a></li>
+    ```
 
 * Inside your newly created section, use the following as your skeleton:
 
+    ```html
     <h2>Element</h2>
     <p>Short description</p>
 
@@ -184,6 +187,7 @@ the href of the link, matches that of the file you created in step 1, for exampl
         <code class="language-markup"></code>
         </pre>
     </section>
+    ```
 
 You need not enter anything inside the code sample section as this will be populated
 by the JS from the sample container above it. And that is all there is to it.
