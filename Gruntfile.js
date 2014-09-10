@@ -71,6 +71,9 @@ module.exports = function(grunt) {
                 dest: 'docs/'
             }
         },
+        connect: {
+            uses_defaults: {}
+        },
         watch: {
             scripts: {
                 files: ['docs/less/*.less'],
@@ -82,10 +85,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-css');
 
-    grunt.registerTask('default', 'less:sandstone');
+    grunt.registerTask('default', ['less:sandstone', 'connect', 'watch']);
     grunt.registerTask('lintify', ['jshint', 'csslint']);
     grunt.registerTask('prep_prod', ['less:sandstone', 'lintify', 'less:sandstone_prod']);
     grunt.registerTask('dev_docs', ['less:styleguide', 'copy:docs']);

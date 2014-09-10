@@ -124,6 +124,70 @@ js folder.
 This will generate the Sandstone css and then copy all the relevant files into
 the docs/ directory.
 
+# Contributing To The Docs #
+
+If you want to help build better docs for the Sandstone theme project, the steps are real simple.
+
+First you will need to have the following prerequisites installed:
+
+* [Nodejs][nodejs]
+
+Once you have forked and cloned the project, and have Nodejs installed, change
+directory into the root of the project folder and run:
+
+    npm install
+
+This will install all of the prerequisites you will need to build and contribute
+to the project in general, and the docs in particular.
+
+## Building and Serving the Docs ##
+
+To build the docs, run the following command from the root of the repo:
+
+    grunt dev_docs
+    ## Followed by
+    grunt
+
+The last command will preprocess the main sandstone LESS files, startup a simple
+HTTP server, and then watch for changes made to the styleguide.less file in
+docs/less/styleguide.less
+
+Fire up your browser and point it at:
+
+    http://127.0.0.1:8000/docs/
+
+## Adding a New Section ##
+
+If you wish to add a completely new section to the docs, here are the steps to
+follow:
+
+* Create the page inside docs/sections e.x. new_section.html
+* Link to this section in docs/index.html under the nav element. NB! Ensure that
+the href of the link, matches that of the file you created in step 1, for example:
+
+    <li><a href="new_section.html">This Can Be Anything</a></li>
+
+* Inside your newly created section, use the following as your skeleton:
+
+    <h2>Element</h2>
+    <p>Short description</p>
+
+    <h3>Sample 1</h3>
+    <section class="sample-container">
+        <button class="button-green">download</button>
+    </section>
+
+    <section class="code-sample show">
+        <h4>HTML</h4>
+
+        <pre>
+        <code class="language-markup"></code>
+        </pre>
+    </section>
+
+You need not enter anything inside the code sample section as this will be populated
+by the JS from the sample container above it. And that is all there is to it.
+
 [nodejs]: http://nodejs.org
 [less]: https://github.com/cloudhead/less.js
 [volo]: https://github.com/volojs/volo
