@@ -2,26 +2,9 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         less: {
-            sandstone: {
-                files: {
-                    'css/sandstone/sandstone-resp.css' : 'css/sandstone/sandstone-resp.less'
-                }
-            },
             styleguide: {
-                options: {
-                    paths: 'css/sandstone'
-                },
                 files: {
-                    'css/sandstone/sandstone-resp.css' : 'css/sandstone/sandstone-resp.less',
-                    'docs/css/styleguide.css' : 'docs/less/styleguide.less'
-                }
-            },
-            sandstone_prod: {
-                options: {
-                    compress: true
-                },
-                files: {
-                    'css/sandstone/sandstone-resp.min.css' : 'css/sandstone/sandstone-resp.less'
+                    'css/styleguide.css' : 'less/styleguide.less'
                 }
             }
         },
@@ -48,7 +31,7 @@ module.exports = function(grunt) {
         },
         csslint: {
             base_theme: {
-                src: "css/*.css",
+                src: "css/styleguide.css",
                 rules: {
                     "empty-rules": 2,
                     "fallback-colors": 2,
@@ -60,38 +43,25 @@ module.exports = function(grunt) {
                 }
             }
         },
-        copy: {
-            docs: {
-                expand: true,
-                src: [
-                    'css/sandstone/sandstone-resp.css',
-                    'js/site.js',
-                    'media/**'
-                ],
-                dest: 'docs/'
-            }
-        },
         connect: {
             uses_defaults: {}
         },
         watch: {
             scripts: {
-                files: ['docs/less/*.less'],
-                tasks: ['dev_docs']
+                files: ['less/*.less'],
+                tasks: ['less:styleguide']
             }
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-csslint');
+
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-css');
 
-    grunt.registerTask('default', ['less:sandstone', 'connect', 'watch']);
-    grunt.registerTask('lintify', ['jshint', 'csslint']);
-    grunt.registerTask('prep_prod', ['less:sandstone', 'lintify', 'less:sandstone_prod']);
-    grunt.registerTask('dev_docs', ['less:styleguide', 'copy:docs' ,'connect', 'watch']);
-    grunt.registerTask('build_docs', ['less:styleguide', 'lintify', 'copy:docs']);
+    grunt.registerTask('default', ['less:styleguide']);
+    grunt.registerTask('lintify', ['less:styleguide', 'jshint', 'csslint']);
+    grunt.registerTask('dev_docs', ['less:styleguide', 'connect', 'watch']);
 };
