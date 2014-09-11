@@ -1,6 +1,6 @@
 $(function() {
     var location = window.location.pathname;
-    var sectionsPath = '/docs/sections/';
+    var sectionsPath = 'sections/';
     var container = $('article');
 
     $.get(sectionsPath + 'overview.html', function(data) {

@@ -63,5 +63,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['less:styleguide']);
     grunt.registerTask('lintify', ['less:styleguide', 'jshint', 'csslint']);
-    grunt.registerTask('dev_docs', ['less:styleguide', 'connect', 'watch']);
+    grunt.registerTask('dev-docs', ['less:styleguide', 'connect', 'watch']);
 };

@@ -28,7 +28,7 @@ to the docs.
 Whilst working on the docs, whether it be styleguide.less or, adding new documentation
 sections, you simply run the following from the root of the repo:
 
-    grunt dev_docs
+    grunt dev-docs
 
 This task will first preprocess styleguide.less then, startup a simple
 HTTP server, and start watching for changes made to styleguide.less, in which case,
@@ -89,7 +89,7 @@ This will run the default task which uses lessc to preprocess the styleguide.les
 This will preprocess styleguide.less, then lint the JS and CSS. It will however not lint
 the sandstone-resp.css file nor will it lint the JS in the libs directory.
 
-    grunt dev_docs
+    grunt dev-docs
 
 This will preprocess styleguide.less, startup the HTTP server and then watch for
 changes to the LESS files and preprocesses as needed.
