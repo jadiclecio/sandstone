@@ -60,6 +60,12 @@ dl dt {
 dl dd {
   margin-bottom: 1.2rem;
 }
+nav.menu-bar {
+  padding: 0;
+}
+nav.menu-bar ul li a {
+  padding: 6.666666666666667px 10px;
+}
 .container {
   padding: 1rem 0;
 }
@@ -72,29 +78,29 @@ dl dd {
   max-height: 30rem;
   overflow: auto;
 }
-.sample-container {
+.grid {
   zoom: 1;
 }
-.sample-container:after {
+.grid:after {
   display: block;
   visibility: hidden;
   height: 0;
   clear: both;
   content: ".";
 }
-.sample-container nav,
-.sample-container aside,
-.sample-container main {
+.grid nav,
+.grid aside,
+.grid main {
   min-height: 8rem;
 }
-.sample-container nav,
-.sample-container aside {
+.grid nav,
+.grid aside {
   background-color: #333;
   float: left;
   width: 140px;
   margin: 0 10px;
 }
-.sample-container main {
+.grid main {
   background-color: #999;
   float: left;
   width: 620px;
@@ -118,4 +124,37 @@ dl dd {
 }
 .comments {
   clear: left;
+}
+/* drop down menu sample */
+.drop-down {
+  margin: 2rem 0;
+}
+.drop-down ul[role="menu"] {
+  background-color: #edecec;
+  padding: 10px;
+  list-style: none;
+}
+.drop-down ul[role="menu"] > li {
+  position: relative;
+  display: inline-block;
+}
+.drop-down .top-level ul {
+  background-color: white;
+  position: absolute;
+  display: none;
+  list-style: none;
+  width: 10rem;
+  border-radius: 0 6px 6px 6px;
+  box-shadow: 1px 1px 2px #e0e0e0;
+}
+.drop-down .top-level ul li {
+  margin-left: 0;
+  padding: .5rem;
+  border-bottom: 1px solid #edecec;
+}
+.drop-down .top-level ul a {
+  display: block;
+}
+.drop-down .top-level:hover ul {
+  display: block;
 }

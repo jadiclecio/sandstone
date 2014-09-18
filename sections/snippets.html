@@ -1,0 +1,82 @@
+<h2>Navigation</h2>
+<p>This is not specifically Sandstone but, useful code snippets using the Sandstone theme.</p>
+
+<h3>Pure CSS Drop-Down</h3>
+<p>The below navigation element provides the code and additional styles for a simple, pure CSS
+    based, drop down menu</p>
+
+<section class="sample-container">
+<nav class="drop-down">
+    <ul role="menu">
+        <li role="menu-item"><a href="#">Home</a></li>
+        <li class="top-level" role="menu-item"><a href="#">Menu Item 1</a>
+            <ul>
+                <li><a href="#">Link One</a></li>
+                <li><a href="#">Link Two</a></li>
+                <li><a href="#">Link Three</a></li>
+                <li><a href="#">Link Four</a></li>
+            </ul>
+        </li>
+        <li class="top-level" role="menu-item"><a href="#">Menu Item 2</a>
+            <ul>
+                <li><a href="#">Link One</a></li>
+                <li><a href="#">Link Two</a></li>
+                <li><a href="#">Link Three</a></li>
+                <li><a href="#">Link Four</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</section>
+
+<section class="code-sample show">
+<h4>HTML</h4>
+
+<pre>
+<code class="language-markup"></code>
+</pre>
+</section>
+
+<section class="code-sample show">
+
+<h4>LESS</h4>
+
+<pre>
+<code class="language-css">.drop-down {
+    ul[role="menu"] {
+        list-style: none;
+        &> li {
+            position: relative;
+            display: inline-block;
+        }
+    }
+    .top-level {
+        ul {
+            background-color: white;
+            position: absolute;
+            display: none;
+            list-style: none;
+            width: 10rem;
+            @radius: 0 6px 6px 6px;
+            .border-radius(@radius);
+            @shadow: 1px 1px 2px #e0e0e0;
+            .box-shadow(@shadow);
+            li {
+                margin-left: 0;
+                padding: .5rem;
+                border-bottom: 1px solid #edecec;
+            }
+            a {
+                display: block;
+            }
+        }
+        &:hover {
+            ul {
+                display: block;
+            }
+        }
+    }
+}</code>
+</pre>
+
+</section>
