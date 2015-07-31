@@ -1,48 +1,5 @@
-.form-field-error {
-  border-color: #af3232;
-  box-shadow: 0 0 0 2px rgba(175, 50, 50, 0.4);
-}
 /****************************************************************************/
-.visually-hidden {
-  position: absolute!important;
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  padding: 0;
-  border: 0;
-}
-.hidden {
-  display: none;
-}
 /****************************************************************************/
-.image-replaced {
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.multi-column-clear {
-  -webkit-column-width: auto;
-  -moz-column-width: auto;
-  -o-column-width: auto;
-  column-width: auto;
-  -webkit-column-count: auto;
-  -moz-column-count: auto;
-  -o-column-count: auto;
-  column-count: auto;
-  -webkit-column-gap: normal;
-  -moz-column-gap: normal;
-  -o-column-gap: normal;
-  column-gap: normal;
-}
-.multi-column-avoid-break {
-  page-break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-  -moz-column-break-inside: avoid;
-  -o-column-break-inside: avoid;
-  column-break-inside: avoid;
-}
 html,
 body,
 div,
@@ -107,6 +64,7 @@ hgroup,
 menu,
 footer,
 header,
+main,
 nav,
 section,
 summary,
@@ -127,6 +85,7 @@ figcaption,
 hgroup,
 footer,
 header,
+main,
 nav,
 section,
 audio,
@@ -136,39 +95,40 @@ video {
 a img {
   border: 0;
 }
+/*! updated 2015-06-17 */
 @font-face {
   font-family: 'Open Sans Light';
-  src: url('../../media/fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../../media/fonts/OpenSans-Light-webfont.woff') format('woff'), url('../../media/fonts/OpenSans-Light-webfont.ttf') format('truetype');
+  src: url('/media/fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('/media/fonts/OpenSans-Light-webfont.woff') format('woff'), url('/media/fonts/OpenSans-Light-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Open Sans Light';
-  src: url('../../media/fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../../media/fonts/OpenSans-Semibold-webfont.woff') format('woff'), url('../../media/fonts/OpenSans-Semibold-webfont.ttf') format('truetype');
+  src: url('/media/fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'), url('/media/fonts/OpenSans-Semibold-webfont.woff') format('woff'), url('/media/fonts/OpenSans-Semibold-webfont.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'Open Sans Light';
-  src: url('../../media/fonts/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../../media/fonts/OpenSans-LightItalic-webfont.woff') format('woff'), url('../../media/fonts/OpenSans-LightItalic-webfont.ttf') format('truetype');
+  src: url('/media/fonts/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'), url('/media/fonts/OpenSans-LightItalic-webfont.woff') format('woff'), url('/media/fonts/OpenSans-LightItalic-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: 'Open Sans';
-  src: url('../../media/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../../media/fonts/OpenSans-Regular-webfont.woff') format('woff'), url('../../media/fonts/OpenSans-Regular-webfont.ttf') format('truetype');
+  src: url('/media/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('/media/fonts/OpenSans-Regular-webfont.woff') format('woff'), url('/media/fonts/OpenSans-Regular-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Open Sans';
-  src: url('../../media/fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../../media/fonts/OpenSans-Bold-webfont.woff') format('woff'), url('../../media/fonts/OpenSans-Bold-webfont.ttf') format('truetype');
+  src: url('/media/fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('/media/fonts/OpenSans-Bold-webfont.woff') format('woff'), url('/media/fonts/OpenSans-Bold-webfont.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'Open Sans';
-  src: url('../../media/fonts/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('../../media/fonts/OpenSans-Italic-webfont.woff') format('woff'), url('../../media/fonts/OpenSans-Italic-webfont.ttf') format('truetype');
+  src: url('/media/fonts/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('/media/fonts/OpenSans-Italic-webfont.woff') format('woff'), url('/media/fonts/OpenSans-Italic-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
@@ -179,23 +139,148 @@ a img {
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../../media/fonts/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../media/fonts/OpenSans-BoldItalic-webfont.woff') format('woff'),
-         url('../../media/fonts/OpenSans-BoldItalic-webfont.ttf') format('truetype');
+    src: url('/media/fonts/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/media/fonts/OpenSans-BoldItalic-webfont.woff') format('woff'),
+         url('/media/fonts/OpenSans-BoldItalic-webfont.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Open Sans Extrabold';
-    src: url('../../media/fonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix-2013') format('embedded-opentype'),
-         url('../../media/fonts/OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
-         url('../../media/fonts/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype');
+    src: url('/media/fonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix-2013') format('embedded-opentype'),
+         url('/media/fonts/OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
+         url('/media/fonts/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype');
     font-weight: 800;
     font-style: italic;
 }
 
  */
+.button-flat,
+.button-flat:link,
+.button-flat:visited {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border-radius: 6px;
+  -webkit-transition: all linear 0.25s;
+  transition: all linear 0.25s;
+  font-family: 'Open Sans', X-LocaleSpecific, sans-serif;
+  text-align: center;
+  padding: 12px 40px;
+  margin-bottom: 20px;
+  background: #00a0dc;
+  color: #fff !important;
+  font-size: 14px;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+}
+.button-flat:hover,
+.button-flat:link:hover,
+.button-flat:visited:hover,
+.button-flat:focus,
+.button-flat:link:focus,
+.button-flat:visited:focus {
+  text-decoration: none;
+  background: #00abeb;
+  color: #fff;
+}
+.button-flat-dark {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border-radius: 6px;
+  -webkit-transition: all linear 0.25s;
+  transition: all linear 0.25s;
+  font-family: 'Open Sans', X-LocaleSpecific, sans-serif;
+  text-align: center;
+  padding: 12px 40px;
+  margin-bottom: 20px;
+  background: #00a0dc;
+  color: #fff !important;
+  font-size: 14px;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  background: #005189;
+}
+.button-flat-dark:hover,
+.button-flat-dark:focus {
+  text-decoration: none;
+  background: #00abeb;
+  color: #fff;
+}
+.button-flat-dark:hover,
+.button-flat-dark:focus {
+  background: #005a98;
+}
+.button-flat-green {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border-radius: 6px;
+  -webkit-transition: all linear 0.25s;
+  transition: all linear 0.25s;
+  font-family: 'Open Sans', X-LocaleSpecific, sans-serif;
+  text-align: center;
+  padding: 12px 40px;
+  margin-bottom: 20px;
+  background: #00a0dc;
+  color: #fff !important;
+  font-size: 14px;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  background: #6fbe4a;
+}
+.button-flat-green:hover,
+.button-flat-green:focus {
+  text-decoration: none;
+  background: #00abeb;
+  color: #fff;
+}
+.button-flat-green:hover,
+.button-flat-green:focus {
+  background: #78c255;
+}
+.button-flat-inverted {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border-radius: 6px;
+  -webkit-transition: all linear 0.25s;
+  transition: all linear 0.25s;
+  font-family: 'Open Sans', X-LocaleSpecific, sans-serif;
+  text-align: center;
+  padding: 12px 40px;
+  margin-bottom: 20px;
+  background: #00a0dc;
+  color: #fff !important;
+  font-size: 14px;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.4);
+  color: #00a0dc;
+  border: 2px solid #00a0dc;
+}
+.button-flat-inverted:hover,
+.button-flat-inverted:focus {
+  text-decoration: none;
+  background: #00abeb;
+  color: #fff;
+}
+.button-flat-inverted:hover,
+.button-flat-inverted:focus {
+  background: #ffffff;
+}
+html[lang^='en'] .button-flat,
+html[lang^='en'] .button-flat-dark,
+html[lang^='en'] .button-flat-green,
+html[lang^='en'] .button-flat-inverted {
+  text-transform: uppercase;
+}
 .button,
 .button:link,
 .button:visited {
@@ -216,6 +301,7 @@ a img {
   color: #ffffff;
   text-align: center;
   font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   padding: 5px 10px;
   line-height: 1.1;
@@ -305,6 +391,7 @@ a img {
   color: #ffffff;
   text-align: center;
   font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   padding: 5px 10px;
   line-height: 1.1;
@@ -419,6 +506,7 @@ a img {
   color: #ffffff;
   text-align: center;
   font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   padding: 5px 10px;
   line-height: 1.1;
@@ -533,6 +621,7 @@ a img {
   color: #ffffff;
   text-align: center;
   font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   padding: 5px 10px;
   line-height: 1.1;
@@ -549,6 +638,7 @@ a img {
   padding: 4px 10.5px;
   color: #484848;
   font-size: 10.5px;
+  font-size: 0.65625rem;
   font-weight: normal;
   text-shadow: none;
   box-shadow: 0 0 12px rgba(230, 230, 230, 0.2) inset, 0 -2px #e8e8e8 inset;
@@ -648,7 +738,7 @@ a img {
   display: block;
   margin-right: -12px;
   padding: 0 30px 0 0;
-  background: url(../../media/img/sandstone/buttons/arrow-go-r.png) right center no-repeat;
+  background: url(/media/img/sandstone/buttons/arrow-go-r.png) right center no-repeat;
 }
 .button-sand,
 .button-sand:link,
@@ -669,6 +759,7 @@ a img {
   color: #ffffff;
   text-align: center;
   font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   padding: 5px 10px;
   line-height: 1.1;
@@ -777,6 +868,7 @@ a img {
 }
 .button-list li {
   font-size: 14px;
+  font-size: 0.875rem;
   margin: 0;
   padding: 0;
   list-style-style: none;
@@ -829,6 +921,8 @@ a img {
   box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3), inset 0px 12px 24px 2px rgba(255, 255, 255, 0.2);
   color: #0096dd;
 }
+.download-button .ios-download,
+.download-button .linux-arm-download,
 .download-button .unrecognized-download,
 .download-button .unsupported-download {
   display: none;
@@ -863,6 +957,7 @@ a img {
   color: #ffffff;
   text-align: center;
   font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   padding: 5px 10px;
   line-height: 1.1;
@@ -893,6 +988,7 @@ a img {
   font-weight: normal;
   line-height: 20px;
   font-size: 16px;
+  font-size: 1rem;
   border-radius: 6px;
 }
 .download-button .download-link:hover,
@@ -947,7 +1043,7 @@ a img {
   color: #b8e779;
   margin-left: -54px;
   _margin-left: 0;
-  background: url(../../media/img/sandstone/buttons/firefox-large.png?2013-06) 0 0 no-repeat;
+  background: url(/media/img/sandstone/buttons/firefox-large.png) 0 0 no-repeat;
   _background-color: #659324;
   min-height: 82px;
   margin-bottom: -12px;
@@ -959,6 +1055,7 @@ a img {
   display: block;
   color: #fff;
   font-size: 30px;
+  font-size: 1.875rem;
   font-weight: normal;
   letter-spacing: -0.02em;
   padding-top: 8px;
@@ -977,6 +1074,7 @@ a img {
   color: #346012;
   padding-top: 2px;
   font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 100%;
   text-shadow: 0 1px rgba(255, 255, 255, 0.2);
 }
@@ -995,15 +1093,17 @@ a img {
   _margin-left: 0;
   margin-top: -2px;
   margin-bottom: -7px;
-  background-image: url(../../media/img/sandstone/buttons/firefox-small.png?2013-06);
+  background-image: url(/media/img/sandstone/buttons/firefox-small.png);
   min-height: 45px;
   padding: 10px 20px 10px 73px;
   overflow: visible;
   font-size: 12px;
+  font-size: 0.75rem;
   border-radius: 6px;
 }
 .download-button-small .download-link .download-title {
   font-size: 22px;
+  font-size: 1.375rem;
   padding-top: 0;
   margin-bottom: 0;
 }
@@ -1015,39 +1115,64 @@ a img {
   width: 100px;
 }
 .download-button-beta.download-button-small .download-link .download-lang,
-.download-button-aurora.download-button-small .download-link .download-lang {
+.download-button-alpha.download-button-small .download-link .download-lang {
   top: 33px;
 }
 .download-button-beta .download-link .download-title,
-.download-button-aurora .download-link .download-title,
+.download-button-alpha .download-link .download-title,
 .download-button-beta .download-link .download-title span,
-.download-button-aurora .download-link .download-title span {
+.download-button-alpha .download-link .download-title span {
   font-size: 24px;
+  font-size: 1.5rem;
 }
 .download-button-beta.download-button-small .download-link .download-title,
-.download-button-aurora.download-button-small .download-link .download-title,
+.download-button-alpha.download-button-small .download-link .download-title,
 .download-button-beta.download-button-small .download-link .download-title span,
-.download-button-aurora.download-button-small .download-link .download-title span {
+.download-button-alpha.download-button-small .download-link .download-title span {
   font-size: 20px;
+  font-size: 1.25rem;
+}
+.download-button-alpha.download-button-small .download-link .download-title {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-style: italic;
+}
+.download-button-alpha.download-button-small .download-link .download-title span {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-style: normal;
+  margin-bottom: 0;
+  letter-spacing: normal;
+}
+.download-button-alpha.download-button-small .download-link .download-subtitle {
+  display: none;
+}
+.download-button-alpha.download-button-small .download-link .download-lang {
+  top: 50%;
+  margin-top: -1em;
+}
+.download-button-alpha.download-button-simple .download-link .download-subtitle {
+  display: block;
 }
 .download-button.download-button-beta.download-button-small .download-list .os_android .download-link .download-title span,
-.download-button.download-button-aurora.download-button-small .download-list .os_android .download-link .download-title span,
-.download-button.download-button-mobile.download-button-aurora.download-button-small .download-link .download-title span,
-.download-button.download-button-mobile.download-button-beta.download-button-small .download-link .download-title span {
+.download-button.download-button-alpha.download-button-small .download-list .os_android .download-link .download-title span,
+.download-button.download-button-android.download-button-alpha.download-button-small .download-link .download-title span,
+.download-button.download-button-android.download-button-beta.download-button-small .download-link .download-title span {
   font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: -0.01em;
 }
 .download-button-large.beta .download-link .download-content {
-  background-image: url(../../media/img/sandstone/buttons/beta-large.png?2013-06);
+  background-image: url(/media/img/sandstone/buttons/beta-large.png);
 }
 .download-button-small.beta .download-link .download-content {
-  background-image: url(../../media/img/sandstone/buttons/beta-small.png?2013-06);
+  background-image: url(/media/img/sandstone/buttons/beta-small.png);
 }
-.download-button-large.aurora .download-link .download-content {
-  background-image: url(../../media/img/sandstone/buttons/aurora-large.png?2013-06);
+.download-button-large.alpha .download-link .download-content {
+  background-image: url(/media/img/sandstone/buttons/aurora-large.png);
 }
-.download-button-small.aurora .download-link .download-content {
-  background-image: url(../../media/img/sandstone/buttons/aurora-small.png?2013-06);
+.download-button-small.alpha .download-link .download-content {
+  background-image: url(/media/img/sandstone/buttons/aurora-small.png);
 }
 .download-button.download-button-noicon .download-link {
   width: 250px;
@@ -1056,68 +1181,112 @@ a img {
 .download-button.download-button-noicon .download-link .download-content {
   margin-left: auto;
   padding-left: 55px;
-  background-image: url(../../media/img/sandstone/buttons/download-arrow.png);
+  background-image: url(/media/img/sandstone/buttons/download-arrow.png);
   background-position: 15px 30px;
 }
 .download-button.download-button-noicon .download-link .download-subtitle {
   margin-right: auto;
 }
 .download-button-noicon .download-list .os_android .download-link .download-title span,
-.download-button-mobile.download-button-noicon .download-link .download-title span {
+.download-button-android.download-button-noicon .download-link .download-title span {
   padding-top: 7px;
 }
 .download-button-small.download-button-noicon .download-link .download-content {
-  background-image: url(../../media/img/sandstone/buttons/download-arrow-small.png);
+  background-image: url(/media/img/sandstone/buttons/download-arrow-small.png);
   background-position: 15px 18px;
 }
 .download-button-small.download-button-noicon .download-list .os_android .download-link .download-title span,
-.download-button-small.download-button-mobile.download-button-noicon .download-link .download-title span {
+.download-button-small.download-button-android.download-button-noicon .download-link .download-title span {
   padding-top: 0;
 }
+.download-button.download-button-simple .download-link {
+  margin-left: 0;
+  width: 240px;
+}
+.download-button.download-button-simple .download-link .download-content {
+  background-image: none;
+  padding: 20px 40px;
+  margin-left: 0;
+  margin-bottom: 0;
+  min-height: 0;
+  color: #fff;
+  text-align: center;
+}
+.download-button.download-button-simple .download-link .download-title,
+.download-button.download-button-simple .download-link .download-lang {
+  display: none;
+}
+.download-button.download-button-simple .download-link .download-subtitle {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+.download-button.download-button-simple small.download-other {
+  display: none !important;
+}
+.download-button.download-button-simple.download-button-small .download-link {
+  width: 210px;
+}
+.download-button.download-button-simple.download-button-small .download-link .download-content {
+  padding: 10px 20px;
+}
+.download-button.download-button-simple.download-button-small .download-link .download-subtitle {
+  font-size: 16px;
+  font-size: 1rem;
+}
+.download-button.download-button-check-old-fx .download-link .download-content {
+  padding: 20px;
+}
+.download-button .os_win64,
 .download-button .os_linux,
 .download-button .os_linux64,
+.android .download-button-desktop,
+.windows.arm .download-button .os_win,
+.linux.arm .download-button .os_linux,
 .linux.x86.x64 .download-list .os_linux,
-.download-button .os_windows,
+.download-button .os_win,
 .download-button .os_osx,
 .download-button .os_android,
 .no-js .download-list,
 .other .download-list {
   display: none !important;
 }
+.ios .download-button .ios-download,
 .linux .download-button .os_linux,
 .linux.x86.x64 .download-button .os_linux64,
-.windows .download-button .os_windows,
+.windows .download-button .os_win,
 .osx .download-button .os_osx,
 .android .download-button .os_android,
-.download-button-mobile .os_android,
+.download-button-android .os_android,
 .android .download-button-desktop .download-list,
-.android .download-button-desktop small.os_windows,
-.no-js .download-button-mobile .download-list,
-.other .download-button-mobile .download-list,
-.other .download-button small.os_windows {
+.android .download-button-desktop small.os_win,
+.no-js .download-button-android .download-list,
+.other .download-button-android .download-list,
+.other .download-button small.os_win {
   display: block !important;
 }
-.ios .download-button .unsupported-download,
+.windows.arm .download-button .unsupported-download,
+.linux.arm .download-button .linux-arm-download,
 .oldwin .download-button .unsupported-download,
 .oldmac .download-button .unsupported-download {
   display: block;
   max-width: 250px;
 }
 .download-button small.download-other,
-.other .download-button-mobile small.download-other,
+.other .download-button-android small.download-other,
 .android .download-button-desktop small.download-other {
   font-family: 'Open Sans', X-LocaleSpecific, sans-serif;
   display: block;
   font-size: 11px;
+  font-size: 0.6875rem;
   text-align: center;
   margin-top: 6px;
   color: #bbbbbb;
 }
 .download-button small.download-other a:link,
-.other .download-button-mobile small.download-other a:link,
+.other .download-button-android small.download-other a:link,
 .android .download-button-desktop small.download-other a:link,
 .download-button small.download-other a:visited,
-.other .download-button-mobile small.download-other a:visited,
+.other .download-button-android small.download-other a:visited,
 .android .download-button-desktop small.download-other a:visited {
   color: #999;
 }
@@ -1137,12 +1306,14 @@ a img {
   text-shadow: none;
   margin: 0 0 6px 0;
   font-size: 18px;
+  font-size: 1.125rem;
 }
 .download-button .download-dumb ul li {
   display: inline;
 }
 .download-button .download-dumb small {
   font-size: 11px;
+  font-size: 0.6875rem;
   letter-spacing: normal;
 }
 .download-button .download-dumb .button-green {
@@ -1151,42 +1322,50 @@ a img {
   margin-left: 3px;
   margin-bottom: 3px;
 }
+.ios-download a:before {
+  content: '\A';
+  white-space: pre;
+}
 .download-button .download-list .os_android .download-link .download-title,
-.download-button-mobile .download-link .download-title {
+.download-button-android .download-link .download-title {
   padding-top: 0;
   margin-bottom: 5px;
   font-size: 16px;
+  font-size: 1rem;
   color: #346012;
   text-shadow: 0 1px rgba(255, 255, 255, 0.2);
 }
 .download-button .download-list .os_android .download-link .download-subtitle,
-.download-button-mobile .download-link .download-subtitle {
+.download-button-android .download-link .download-subtitle {
   display: block;
   position: static;
   text-align: left;
   margin-right: 40px;
   color: #fff;
   font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.2;
   letter-spacing: normal;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 .download-button.download-button-small .download-list .os_android .download-link .download-title,
-.download-button.download-button-small.download-button-mobile .download-link .download-title {
+.download-button.download-button-small.download-button-android .download-link .download-title {
   padding-top: 0;
   margin-bottom: 5px;
   font-size: 13px;
+  font-size: 0.8125rem;
   color: #346012;
   text-shadow: 0 1px rgba(255, 255, 255, 0.2);
   letter-spacing: normal;
 }
 .download-button.download-button-small .download-list .os_android .download-link .download-title span,
-.download-button.download-button-small.download-button-mobile .download-link .download-title span {
+.download-button.download-button-small.download-button-android .download-link .download-title span {
   font-size: 22px;
+  font-size: 1.375rem;
   margin-bottom: 0;
 }
 .download-button.download-button-small .download-list .os_android .download-link .download-subtitle,
-.download-button.download-button-small.download-button-mobile .download-link .download-subtitle {
+.download-button.download-button-small.download-button-android .download-link .download-subtitle {
   position: absolute;
   top: 15px;
   right: 10px;
@@ -1194,25 +1373,30 @@ a img {
   width: 85px;
   margin-right: 0;
 }
+.download-button .download-list .os_android.api-9,
 .download-button .download-list .os_android.x86,
-.download-button .download-other.os_android .armv7,
+.download-button .download-other.os_android .api-11,
+.android.gingerbread .download-button .download-list .os_android.api-11,
+.android.gingerbread .download-button .download-other.os_android .api-9,
 .android.x86 .download-button .download-list .os_android.armv7,
 .android.x86 .download-button .download-other.os_android .x86 {
   display: none !important;
 }
+.android.gingerbread .download-button .download-list .os_android.api-9,
 .android.x86 .download-button .download-list .os_android.x86 {
   display: block !important;
 }
+.android.gingerbread .download-button .download-other.os_android .api-11,
 .android.x86 .download-button .download-other.os_android .armv7 {
   display: inline !important;
 }
 /* {{{ l10n tweaks */
-html[lang="es-AR"] .download-button-aurora.download-button-small .download-link .download-lang,
-html[lang="es-CL"] .download-button-aurora.download-button-small .download-link .download-lang,
-html[lang="es-ES"] .download-button-aurora.download-button-small .download-link .download-lang,
-html[lang="es-MX"] .download-button-aurora.download-button-small .download-link .download-lang,
-html[lang="pt-BR"] .download-button-aurora.download-button-small .download-link .download-lang,
-html[lang="pt-PT"] .download-button-aurora.download-button-small .download-link .download-lang,
+html[lang="es-AR"] .download-button-alpha.download-button-small .download-link .download-lang,
+html[lang="es-CL"] .download-button-alpha.download-button-small .download-link .download-lang,
+html[lang="es-ES"] .download-button-alpha.download-button-small .download-link .download-lang,
+html[lang="es-MX"] .download-button-alpha.download-button-small .download-link .download-lang,
+html[lang="pt-BR"] .download-button-alpha.download-button-small .download-link .download-lang,
+html[lang="pt-PT"] .download-button-alpha.download-button-small .download-link .download-lang,
 html[lang="es-AR"] .download-button-beta.download-button-small .download-link .download-lang,
 html[lang="es-CL"] .download-button-beta.download-button-small .download-link .download-lang,
 html[lang="es-ES"] .download-button-beta.download-button-small .download-link .download-lang,
@@ -1221,21 +1405,22 @@ html[lang="pt-BR"] .download-button-beta.download-button-small .download-link .d
 html[lang="pt-PT"] .download-button-beta.download-button-small .download-link .download-lang {
   top: 30px;
 }
-html[lang="gd"] .download-button-aurora.download-button-small .download-link .download-subtitle,
-html[lang="mk"] .download-button-aurora.download-button-small .download-link .download-subtitle,
+html[lang="gd"] .download-button-alpha.download-button-small .download-link .download-subtitle,
+html[lang="mk"] .download-button-alpha.download-button-small .download-link .download-subtitle,
 html[lang="gd"] .download-button-beta.download-button-small .download-link .download-subtitle,
 html[lang="mk"] .download-button-beta.download-button-small .download-link .download-subtitle {
   padding-right: 50px;
 }
 html[lang="gd"] .download-button.download-button-small .download-list .os_android .download-subtitle,
 html[lang="mk"] .download-button.download-button-small .download-list .os_android .download-subtitle,
-html[lang="gd"] .download-button.download-button-small.download-button-mobile .download-subtitle,
-html[lang="mk"] .download-button.download-button-small.download-button-mobile .download-subtitle {
+html[lang="gd"] .download-button.download-button-small.download-button-android .download-subtitle,
+html[lang="mk"] .download-button.download-button-small.download-button-android .download-subtitle {
   padding-right: 0;
 }
 html[lang="ml"] .download-button .download-link .download-title,
 html[lang="ml"] .download-button .download-link .download-title span {
   font-size: 26px;
+  font-size: 1.625rem;
   line-height: 1.2em;
 }
 html[lang="my"] .download-button .download-link .download-title,
@@ -1244,11 +1429,11 @@ html[lang="my"] .download-button .download-link .download-title span,
 html[lang="te"] .download-button .download-link .download-title span {
   line-height: 1.4em;
 }
-html[lang="as"] .download-button.download-button-beta.download-button-mobile.download-button-small .download-subtitle,
-html[lang="ml"] .download-button.download-button-beta.download-button-mobile.download-button-small .download-subtitle,
-html[lang="ms"] .download-button.download-button-beta.download-button-mobile.download-button-small .download-subtitle,
-html[lang="ta"] .download-button.download-button-beta.download-button-mobile.download-button-small .download-subtitle,
-html[lang="te"] .download-button.download-button-beta.download-button-mobile.download-button-small .download-subtitle,
+html[lang="as"] .download-button.download-button-beta.download-button-android.download-button-small .download-subtitle,
+html[lang="ml"] .download-button.download-button-beta.download-button-android.download-button-small .download-subtitle,
+html[lang="ms"] .download-button.download-button-beta.download-button-android.download-button-small .download-subtitle,
+html[lang="ta"] .download-button.download-button-beta.download-button-android.download-button-small .download-subtitle,
+html[lang="te"] .download-button.download-button-beta.download-button-android.download-button-small .download-subtitle,
 html[lang="as"] .download-button.download-button-small .download-list .os_android .download-subtitle,
 html[lang="ml"] .download-button.download-button-small .download-list .os_android .download-subtitle,
 html[lang="ms"] .download-button.download-button-small .download-list .os_android .download-subtitle,
@@ -1261,12 +1446,88 @@ html[lang="te"] .download-button.download-button-small .download-list .os_androi
   text-align: left;
 }
 /* }}} */
+@-webkit-keyframes sand-bounce-down {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -500px, 0);
+    transform: translate3d(0, -500px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes sand-bounce-down {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -500px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    transform: translate3d(0, 0, 0);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-webkit-keyframes sand-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes sand-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* {{{ Basic Colors, Text, Links */
 html {
   background: #fff;
+  font-size: 100%;
 }
 body {
   font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
   font-family: 'Open Sans', X-LocaleSpecific, sans-serif;
   color: #333333;
@@ -1275,7 +1536,7 @@ body {
 #outer-wrapper {
   position: relative;
   border-top: 2px solid #fff;
-  background: #f9f9f9 url(../../media/img/sandstone/bg-stone.png) 0 0 repeat-x;
+  background: #f9f9f9 url(/media/img/sandstone/bg-stone.png) 0 0 repeat-x;
 }
 #wrapper {
   padding-bottom: 40px;
@@ -1297,36 +1558,21 @@ a:active {
   color: #0073aa;
   text-decoration: underline;
 }
+a:visited {
+  color: #0073aa;
+}
 a.more:after {
   content: "\00A0\00BB";
   /* nbsp raquo */
   white-space: nowrap;
 }
-.link-button {
-  border: none;
-  background: transparent;
-  color: #0096dd;
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
-  line-height: 1.5;
-  font-family: 'Open Sans', X-LocaleSpecific, sans-serif;
-  cursor: pointer;
-}
-.link-button:hover {
-  text-decoration: underline;
-  color: #0073aa;
-}
-.link-button:focus {
-  outline: 0;
-}
 .sand #outer-wrapper {
-  background: #f5f1e8 url(../../media/img/sandstone/bg-gradient-sand.png) repeat-x;
-  background: url(../../media/img/sandstone/bg-gradient-sand.png) repeat-x, url(../../media/img/sandstone/bg-sand.png) repeat, #f5f1e8;
+  background: #f5f1e8 url(/media/img/sandstone/bg-gradient-sand.png) repeat-x;
+  background: url(/media/img/sandstone/bg-gradient-sand.png) repeat-x, url(/media/img/sandstone/bg-sand.png) repeat, #f5f1e8;
 }
 .sky #outer-wrapper {
-  background: #eeeeee url(../../media/img/sandstone/bg-gradient-sky.png) repeat-x;
-  background: url(../../media/img/sandstone/bg-gradient-sky.png) repeat-x, url(../../media/img/sandstone/grain.png) repeat, #eeeeee;
+  background: #eeeeee url(/media/img/sandstone/bg-gradient-sky.png) repeat-x;
+  background: url(/media/img/sandstone/bg-gradient-sky.png) repeat-x, url(/media/img/sandstone/grain.png) repeat, #eeeeee;
 }
 .sky a {
   color: #67a7d0;
@@ -1340,7 +1586,7 @@ a.more:after {
   color: #fff;
 }
 .space #outer-wrapper {
-  background: #04020b url(../../media/img/sandstone/bg-space.png) repeat-x;
+  background: #04020b url(/media/img/sandstone/bg-space.png) repeat-x;
 }
 .space a {
   color: #2f8aca;
@@ -1371,6 +1617,86 @@ a.more:after {
 .space #masthead nav li li a:visited {
   color: #484848;
 }
+.blueprint {
+  color: #fff;
+}
+.blueprint #outer-wrapper {
+  background: #1e1e21;
+  background-image: -webkit-radial-gradient(top left, ellipse farthest-side, #00549e 0%, rgba(0, 0, 0, 0) 100%);
+  background-image: radial-gradient(ellipse farthest-side at top left, #00549e 0%, rgba(0, 0, 0, 0) 100%);
+  background-size: 100% 500px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.blueprint a {
+  color: #2f8aca;
+}
+.blueprint a:hover,
+.blueprint a:focus,
+.blueprint a:active {
+  color: #55a1d7;
+}
+.blueprint h1,
+.blueprint h2,
+.blueprint h3,
+.blueprint h4,
+.blueprint h5,
+.blueprint h6,
+.blueprint .huge,
+.blueprint .large {
+  color: #fff;
+  text-shadow: none;
+}
+.blueprint #masthead nav li a,
+.blueprint #masthead nav li a:link,
+.blueprint #masthead nav li a:visited {
+  color: #fff;
+}
+.blueprint #masthead nav li li a,
+.blueprint #masthead nav li li a:link,
+.blueprint #masthead nav li li a:visited {
+  color: #484848;
+}
+.mozID a:link,
+.mozID a:active,
+.mozID a:focus,
+.mozID a:visited {
+  color: #fff;
+}
+.mozID a:link:hover,
+.mozID a:active:hover,
+.mozID a:focus:hover,
+.mozID a:visited:hover,
+.mozID a:link:focus,
+.mozID a:active:focus,
+.mozID a:focus:focus,
+.mozID a:visited:focus {
+  text-decoration: underline;
+}
+.mozID h1,
+.mozID h2,
+.mozID h3,
+.mozID h4,
+.mozID h5,
+.mozID h6,
+.mozID .huge,
+.mozID .large {
+  color: #fff;
+  text-shadow: none;
+}
+.mozID #wrapper {
+  width: 100%;
+}
+.mozID #wrapper .container {
+  width: 960px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.mozID #masthead {
+  z-index: 10;
+  padding-left: 0;
+  padding-right: 0;
+}
 h1,
 h2,
 h3,
@@ -1385,52 +1711,54 @@ legend {
   font-weight: normal;
   display: block;
   margin: 0 0 12px 0;
-  line-height: 100%;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+  line-height: 1;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
   color: #484848;
+  letter-spacing: -0.035em;
 }
 .huge,
 .huge h1 {
   font-size: 108px;
-  letter-spacing: -4px;
-  line-height: 100%;
+  font-size: 6.75rem;
 }
 .large,
 .large h1 {
   font-size: 72px;
-  letter-spacing: -3px;
-  line-height: 100%;
+  font-size: 4.5rem;
 }
 h1,
 .huge h2,
 .large h2,
 .billboard h2 {
   font-size: 48px;
-  letter-spacing: -2px;
+  font-size: 3rem;
 }
 h2 {
   font-size: 32px;
-  letter-spacing: -1px;
+  font-size: 2rem;
 }
 h3 {
   font-size: 28px;
-  letter-spacing: -0.5px;
+  font-size: 1.75rem;
 }
 h4,
 legend {
   font-size: 24px;
-  letter-spacing: -0.25px;
+  font-size: 1.5rem;
 }
 h5 {
   font-size: 16px;
+  font-size: 1rem;
 }
 h6 {
   font-size: 14px;
+  font-size: 0.875rem;
 }
 .small,
 small {
   font-size: 12px;
-  line-height: 16px;
+  font-size: 0.75rem;
+  line-height: 1.3;
 }
 hgroup h1,
 hgroup h2,
@@ -1467,8 +1795,9 @@ dl dt {
   font-family: 'Open Sans Light', X-LocaleSpecific-Light, 'Open Sans', X-LocaleSpecific, sans-serif;
   font-weight: normal;
   font-size: 32px;
-  line-height: 100%;
-  letter-spacing: -1px;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -0.035em;
   margin-bottom: 10px;
 }
 dl dd {
@@ -1476,15 +1805,25 @@ dl dd {
 }
 dl.faq dt {
   font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: normal;
 }
 dl.faq dd {
   margin-bottom: 1.5em;
 }
+dl.simple dt {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+dl.simple dd {
+  margin-bottom: 20px;
+}
 pre,
 code {
   color: #666666;
   font-size: 14px;
+  font-size: 0.875rem;
 }
 .center {
   text-align: center;
@@ -1520,6 +1859,7 @@ input[type=time] {
   border-style: solid;
   border-width: 1px;
   font-size: 12px;
+  font-size: 0.75rem;
   font-family: inherit;
   padding: 4px 10px;
   border-radius: 3px;
@@ -1536,6 +1876,7 @@ input[type=email]:focus,
 input[type=password]:focus,
 input[type=search]:focus,
 input[type=text]:focus,
+input[type=tel]:focus,
 input.focus {
   border-color: #42a4e0;
   box-shadow: 0 0 0 2px rgba(73, 173, 227, 0.4);
@@ -1550,6 +1891,7 @@ input[type=email]:-moz-ui-invalid:not(output),
 input[type=password]:-moz-ui-invalid:not(output),
 input[type=search]:-moz-ui-invalid:not(output),
 input[type=text]:-moz-ui-invalid:not(output),
+input[type=tel]:-moz-ui-invalid:not(output),
 input.invalid {
   border-color: #a91300;
   box-shadow: 0 0 0 2px rgba(255, 80, 80, 0.4);
@@ -1572,6 +1914,7 @@ input.invalid {
 }
 .field label .required {
   font-size: 12px;
+  font-size: 0.75rem;
   color: #af3232;
   text-transform: uppercase;
 }
@@ -1588,16 +1931,19 @@ input.invalid {
 .field.required label:after {
   content: " *";
   font-size: 12px;
+  font-size: 0.75rem;
   font-weight: bold;
   color: #af3232;
 }
 .field .field-note {
   font-size: 12px;
+  font-size: 0.75rem;
   color: #666666;
   margin-top: 0.1em;
 }
 .form-minimal-label label {
   font-size: 12px;
+  font-size: 0.75rem;
   color: #999;
 }
 .in-form-fieldset {
@@ -1607,11 +1953,13 @@ input.invalid {
 .in-form-fieldset legend {
   margin-bottom: 10px;
   font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: normal;
 }
 .in-form-fieldset legend.required:after {
   content: " *";
   font-size: 12px;
+  font-size: 0.75rem;
   font-weight: bold;
   color: #af3232;
 }
@@ -1642,7 +1990,8 @@ input.invalid {
 }
 .field-error input[type=email],
 .field-error input[type=password],
-.field-error input[type=text] {
+.field-error input[type=text],
+.field-error input[type=tel] {
   border-color: #af3232;
   box-shadow: 0 0 0 2px rgba(175, 50, 50, 0.4);
 }
@@ -1654,7 +2003,9 @@ input.invalid {
 }
 input[type=email].error,
 input[type=password].error,
-input[type=text].error {
+input[type=text].error,
+input[type=tel].error,
+textarea.error {
   border-color: #af3232;
   box-shadow: 0 0 0 2px rgba(175, 50, 50, 0.4);
 }
@@ -1720,9 +2071,6 @@ label.error {
   width: 540px;
   margin: 0 10px;
 }
-.main-column .title-shadow-box {
-  margin-left: 0;
-}
 .sidebar {
   float: left;
   width: 220px;
@@ -1767,23 +2115,6 @@ label.error {
   clear: both;
   content: ".";
 }
-.callout-content {
-  zoom: 1;
-  display: block;
-  box-shadow: 0 0 0 1px #ffffff inset;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-  margin: 0 auto 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.callout-content:after {
-  display: block;
-  visibility: hidden;
-  height: 0;
-  clear: both;
-  content: ".";
-}
 /* }}} */
 /* {{{ Header Nav */
 #masthead h2 {
@@ -1795,6 +2126,7 @@ label.error {
   margin: 0 16px;
   text-transform: uppercase;
   font-size: 13px;
+  font-size: 0.8125rem;
   font-family: 'Open Sans', X-LocaleSpecific, sans-serif;
 }
 #masthead nav ul {
@@ -1817,7 +2149,7 @@ label.error {
 #masthead nav li .current {
   background-position: 50% 0;
   background-repeat: no-repeat;
-  background-image: url(../../media/img/sandstone/menu-current.png);
+  background-image: url(/media/img/sandstone/menu-current.png);
 }
 #masthead nav li a,
 #masthead nav li a:link,
@@ -1855,12 +2187,13 @@ label.error {
   width: 420px;
   padding: 20px;
   font-size: 48px;
-  letter-spacing: -2px;
+  font-size: 3rem;
+  letter-spacing: -0.05em;
   color: #fff;
   text-shadow: none;
   background: #b30406;
   background: rgba(179, 4, 6, 0.95);
-  margin: -60px 10px 40px;
+  margin: -60px 0 40px;
   position: relative;
   float: left;
 }
@@ -1873,7 +2206,15 @@ label.error {
   position: absolute;
   bottom: -40px;
   left: 0;
-  background: url(../../media/img/mission/title-banner-shadow.png) no-repeat;
+  background: url(/media/img/mission/title-banner-shadow.png) no-repeat;
+}
+html[dir="rtl"] .title-shadow-box {
+  float: right;
+}
+html[dir="rtl"] .title-shadow-box:after {
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 /* }}} */
 /* {{{ Menu Bars */
@@ -1945,6 +2286,7 @@ nav.menu-bar ul li:first-child a {
 .table {
   border-collapse: collapse;
   border-spacing: 0;
+  margin-bottom: 20px;
 }
 .table caption {
   text-align: left;
@@ -1964,6 +2306,7 @@ nav.menu-bar ul li:first-child a {
   border-top: 0;
   padding-top: 0;
   font-size: 16px;
+  font-size: 1rem;
   font-family: 'Open Sans Light', X-LocaleSpecific-Light, 'Open Sans', X-LocaleSpecific, sans-serif;
   font-weight: normal;
 }
@@ -1979,6 +2322,7 @@ nav.menu-bar ul li:first-child a {
   font-family: 'Open Sans Light', X-LocaleSpecific-Light, 'Open Sans', X-LocaleSpecific, sans-serif;
   font-weight: normal;
   font-size: 16px;
+  font-size: 1rem;
   color: #484848;
 }
 .sidebar nav li,
@@ -2002,6 +2346,7 @@ nav.menu-bar ul li:first-child a {
 .sidebar nav li:first-child,
 .sidebar .nav li:first-child {
   font-size: 24px;
+  font-size: 1.5rem;
 }
 .sidebar .reference {
   margin: 40px auto;
@@ -2018,77 +2363,76 @@ nav.menu-bar ul li:first-child a {
 }
 /* }}} */
 /* {{{ Footer Email Form */
-#footer-email-form,
-#newsletter-form {
+.newsletter-form {
   margin-bottom: 0;
 }
-#footer-email-form h3,
-#newsletter-form h3 {
+.newsletter-form h3 {
   float: left;
   width: 300px;
   margin: 0 10px;
 }
-#footer-email-form .form-contents,
-#newsletter-form .form-contents {
+.newsletter-form .form-contents {
   float: left;
   width: 300px;
   margin: 0 10px;
 }
-#footer-email-form .form-submit,
-#newsletter-form .form-submit {
+.newsletter-form .form-submit {
   float: left;
   width: 220px;
   margin: 0 10px;
 }
-#footer-email-form .form-submit input,
-#newsletter-form .form-submit input {
+.newsletter-form .form-submit input {
   overflow: visible;
 }
-#footer-email-form select,
-#newsletter-form select {
+.newsletter-form select {
   max-width: 80%;
 }
-#footer-email-form input[type=email],
-#newsletter-form input[type=email] {
+.newsletter-form input[type=email] {
   width: 80%;
 }
-#footer-email-form .field-privacy,
-#newsletter-form .field-privacy {
+.newsletter-form .field-privacy {
   font-size: 12px;
+  font-size: 0.75rem;
 }
-#footer-email-form .field-privacy input,
-#newsletter-form .field-privacy input {
+.newsletter-form .field-privacy input {
   float: left;
 }
-#footer-email-form .field-privacy .title,
-#newsletter-form .field-privacy .title {
+.newsletter-form .field-privacy .title {
   display: block;
   padding: 0 0 0 25px;
 }
-.html-rtl #footer-email-form h3,
-.html-rtl #newsletter-form h3,
-.html-rtl #footer-email-form .form-contents,
-.html-rtl #newsletter-form .form-contents,
-.html-rtl #footer-email-form .form-submit,
-.html-rtl #newsletter-form .form-submit,
-.html-rtl #footer-email-form .field-privacy input,
-.html-rtl #newsletter-form .field-privacy input {
+.newsletter-form.loading h3,
+.newsletter-form.loading .form-contents,
+.newsletter-form.loading .form-submit {
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.2;
+}
+.html-rtl .newsletter-form h3,
+.html-rtl .newsletter-form .form-contents,
+.html-rtl .newsletter-form .form-submit,
+.html-rtl .newsletter-form .field-privacy input {
   float: right;
 }
-.html-rtl #footer-email-form .field-privacy .title,
-.html-rtl #newsletter-form .field-privacy .title {
+.html-rtl .newsletter-form .field-privacy .title {
   padding: 0 25px 0 0;
 }
-#footer-email-form.thank h3,
-#newsletter-form.thank h3 {
+.newsletter-form.thank {
+  display: none;
+  overflow: hidden;
+}
+.newsletter-form.thank h3 {
   width: auto;
   margin: auto;
   padding: 0;
   float: none;
+  -webkit-animation: sand-bounce-down 0.7s ease-in 0.2s 1 normal both;
+  animation: sand-bounce-down 0.7s ease-in 0.2s 1 normal both;
 }
-#footer-email-form.thank p,
-#newsletter-form.thank p {
+.newsletter-form.thank p {
   margin-top: 20px;
+  -webkit-animation: sand-fade-in 0.5s ease-in 0.8s 1 normal both;
+  animation: sand-fade-in 0.5s ease-in 0.8s 1 normal both;
 }
 .js #form-details,
 .js .form-details {
@@ -2101,7 +2445,6 @@ nav.menu-bar ul li:first-child a {
 .js p.form-details {
   margin-top: 8px;
   line-height: 1;
-  color: #484848;
 }
 #footer-email-errors .errorlist,
 #newsletter-errors .errorlist {
@@ -2124,30 +2467,40 @@ nav.menu-bar ul li:first-child a {
   clear: both;
   content: ".";
 }
+#newsletter-spinner {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 /* }}} */
 /* {{{ Footer */
 #colophon {
   color: #666666;
   padding: 40px 0;
-  font-size: .875em;
-  line-height: 1.285;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.3;
   background: #fff;
   width: 100%;
   margin: 1em 0 0;
 }
 #colophon a,
-#colophon a:link,
-#colophon a:visited {
+#colophon a:link {
   color: #0096dd;
 }
 #colophon a:hover,
 #colophon a:focus,
-#colophon a:active {
+#colophon a:active,
+#colophon a:visited {
   color: #0073aa;
 }
 #colophon h1 {
   margin-bottom: 10px;
   font-size: 14px;
+  font-size: 0.875rem;
 }
 #colophon p,
 #colophon ul {
@@ -2163,9 +2516,16 @@ nav.menu-bar ul li:first-child a {
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
-  background: url(../../media/img/sandstone/footer-mozilla.png) left top no-repeat;
+  background-image: url('/media/img/sandstone/footer-mozilla.png');
   width: 93px;
   height: 24px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  #colophon .logo a {
+    background-image: url("/media/img/sandstone/footer-mozilla-high-res.png");
+    -webkit-background-size: 93px 24px;
+    background-size: 93px 24px;
+  }
 }
 #colophon .row {
   width: 960px;
@@ -2229,11 +2589,31 @@ nav.menu-bar ul li:first-child a {
 .html-rtl #colophon .col-2 ul li {
   float: right;
 }
+.visually-hidden {
+  position: absolute!important;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding: 0;
+  border: 0;
+}
+.hidden {
+  display: none;
+}
+.invert {
+  transform: rotateY(-180deg);
+  transition: transform 1s ease-in-out;
+}
 /* }}} */
 /* {{{ Responsive Grid */
 /* Tablet Layout: 760px */
 @media only screen and (min-width: 760px) and (max-width: 1000px) {
   #wrapper {
+    width: 760px;
+  }
+  .mozID #wrapper .container {
     width: 760px;
   }
   #masthead,
@@ -2249,7 +2629,8 @@ nav.menu-bar ul li:first-child a {
     margin: 0 10px;
   }
   nav.menu-bar {
-    font-size: .9375em;
+    font-size: 13px;
+    font-size: 0.8125rem;
   }
   .sidebar {
     float: left;
@@ -2257,20 +2638,20 @@ nav.menu-bar ul li:first-child a {
     margin: 0 10px;
     margin-left: 70px;
   }
-  #footer-email-form h3,
+  .footer-newsletter-form h3,
   #newsletter-form h3 {
     float: left;
     width: 220px;
     margin: 0 10px;
     padding-top: 4px;
   }
-  #footer-email-form .form-contents,
+  .footer-newsletter-form .form-contents,
   #newsletter-form .form-contents {
     float: left;
     width: 280px;
     margin: 0 10px;
   }
-  #footer-email-form .form-submit,
+  .footer-newsletter-form .form-submit,
   #newsletter-form .form-submit {
     float: left;
     width: 160px;
@@ -2314,6 +2695,9 @@ nav.menu-bar ul li:first-child a {
   #wrapper {
     width: 320px;
   }
+  .mozID #wrapper .container {
+    width: 320px;
+  }
   #masthead,
   #main-feature,
   #main-content,
@@ -2343,7 +2727,7 @@ nav.menu-bar ul li:first-child a {
     width: 32px;
     height: 32px;
     /*margin: -3px 0 0 -3px;*/
-    background: no-repeat center top url(../../media/img/sandstone/icn-menu.png);
+    background: no-repeat center top url(/media/img/sandstone/icn-menu.png);
     text-indent: -999em;
     overflow: hidden;
     cursor: pointer;
@@ -2382,39 +2766,47 @@ nav.menu-bar ul li:first-child a {
     margin-right: .3em;
     margin-left: .3em;
   }
+  .blueprint #masthead nav li a,
+  .blueprint #masthead nav li a:link,
+  .blueprint #masthead nav li a:visited {
+    color: #484848;
+  }
   .huge,
   .huge h1,
   .large,
   .large h1 {
     font-size: 48px;
-    letter-spacing: -2px;
+    font-size: 3rem;
   }
   h1,
   .large h2 {
     font-size: 32px;
-    letter-spacing: -1px;
+    font-size: 2rem;
   }
   h2,
   .billboard h2 {
     font-size: 28px;
-    letter-spacing: -0.5px;
+    font-size: 1.75rem;
   }
   h3 {
     font-size: 24px;
-    letter-spacing: -0.25px;
+    font-size: 1.5rem;
   }
   h4 {
     font-size: 16px;
+    font-size: 1rem;
   }
   h5 {
     font-size: 14px;
+    font-size: 0.875rem;
   }
   dl dt {
     font-size: 24px;
+    font-size: 1.5rem;
   }
   nav.menu-bar {
     text-align: inherit;
-    line-height: 100%;
+    line-height: 1;
   }
   nav.menu-bar ul {
     padding-top: 10px;
@@ -2437,28 +2829,28 @@ nav.menu-bar ul li:first-child a {
   .title-shadow-box {
     width: 340px;
     font-size: 28px;
-    letter-spacing: -0.5px;
+    font-size: 1.75rem;
     margin: -25px 0 20px;
   }
-  #footer-email-form h3,
+  .footer-newsletter-form h3,
   #newsletter-form h3,
-  #footer-email-form .form-contents,
+  .footer-newsletter-form .form-contents,
   #newsletter-form .form-contents,
-  #footer-email-form .form-submit,
+  .footer-newsletter-form .form-submit,
   #newsletter-form .form-submit {
     width: auto;
     float: none;
     margin-bottom: 10px;
   }
-  #footer-email-form .form-submit,
+  .footer-newsletter-form .form-submit,
   #newsletter-form .form-submit {
     margin-top: 10px;
   }
-  .html-rtl #footer-email-form h3,
+  .html-rtl .footer-newsletter-form h3,
   .html-rtl #newsletter-form h3,
-  .html-rtl #footer-email-form .form-contents,
+  .html-rtl .footer-newsletter-form .form-contents,
   .html-rtl #newsletter-form .form-contents,
-  .html-rtl #footer-email-form .form-submit,
+  .html-rtl .footer-newsletter-form .form-submit,
   .html-rtl #newsletter-form .form-submit {
     float: none;
   }
@@ -2482,6 +2874,9 @@ nav.menu-bar ul li:first-child a {
   #nav-main #nav-main-menu li:last-child {
     border: 0;
   }
+  #nav-main .submenu hr {
+    display: none;
+  }
   #nav-main #nav-main-menu a,
   #nav-main #nav-main-menu b {
     cursor: pointer;
@@ -2491,7 +2886,7 @@ nav.menu-bar ul li:first-child a {
     margin: 0 -10px;
   }
   #nav-main #nav-main-menu a.submenu-item {
-    background: 94% 50% no-repeat url(../../media/img/sandstone/arrow-go.png);
+    background: 94% 50% no-repeat url(/media/img/sandstone/arrow-go.png);
   }
   #nav-main #nav-main-menu a:hover,
   #nav-main #nav-main-menu a:focus,
@@ -2508,8 +2903,8 @@ nav.menu-bar ul li:first-child a {
   #nav-main #nav-main-menu a.submenu-item:hover,
   #nav-main #nav-main-menu a.submenu-item:focus,
   #nav-main #nav-main-menu a.submenu-item:active {
-    background-image: url(../../media/img/sandstone/arrow-go.png), -webkit-linear-gradient(top, #43a6e2, #247ac1);
-    background-image: url(../../media/img/sandstone/arrow-go.png), linear-gradient(to bottom, #43a6e2, #247ac1);
+    background-image: url(/media/img/sandstone/arrow-go.png), -webkit-linear-gradient(top, #43a6e2, #247ac1);
+    background-image: url(/media/img/sandstone/arrow-go.png), linear-gradient(to bottom, #43a6e2, #247ac1);
   }
   #nav-main #nav-main-menu li.first > a {
     border-radius: 10px 10px 0 0;
@@ -2542,7 +2937,7 @@ nav.menu-bar ul li:first-child a {
     display: block;
     width: 28px;
     height: 10px;
-    background: no-repeat url(../../media/img/sandstone/menu-point.png);
+    background: no-repeat url(/media/img/sandstone/menu-point.png);
     position: absolute;
     left: 22px;
     top: -10px;
@@ -2584,6 +2979,9 @@ nav.menu-bar ul li:first-child a {
   }
   #colophon .row {
     width: 420px;
+  }
+  .mozID #wrapper .container {
+    width: 440px;
   }
 }
 /* }}} */
