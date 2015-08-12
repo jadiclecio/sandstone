@@ -10,7 +10,7 @@ also provides the tools, via Grunt, to preprocess, lint and minify/uglify the as
 
 You will currently need to following prerequisites installed:
 
-* [Django][django]
+* [Django][https://www.djangoproject.com/)
 
 # Usage #
 
