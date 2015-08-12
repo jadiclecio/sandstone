@@ -1,0 +1,31 @@
+{
+  "name": "mozilla-sandstone",
+  "version": "0.8.0",
+  "homepage": "https://github.com/schalkneethling/sandstone",
+  "authors": ["Mozilla"],
+  "description": "Bootstrap for sites using the Mozilla sandstone theme",
+  "main": ["css/lib/sandstone-resp.css"],
+  "ignore": [
+    "django",
+    "less",
+    "node_modules",
+    "templates",
+    ".gitignore",
+    "bower.json",
+    "contribute.json",
+    "Gruntfile.js",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "mozilla",
+    "sandstone",
+    "theme"
+  ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/schalkneethling/sandstone.git"
+  },
+  "license": "MPL-2.0"
+}

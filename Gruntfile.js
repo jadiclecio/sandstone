@@ -1,63 +1,42 @@
 module.exports = function(grunt) {
 
     grunt.initConfig({
+        clean: ['css', 'django/sandstone/static/', 'django/sandstone/templates/'],
         less: {
-            sandstone: {
+            build: {
                 files: {
-                    'css/sandstone/sandstone-resp.css' : 'css/sandstone/sandstone-resp.less'
+                    'css/lib/sandstone-resp.css' : 'less/sandstone-resp.less',
+                    'css/lib/tabzilla.css' : 'less/tabzilla.less'
                 }
-            },
-            sandstone_prod: {
-                options: {
-                    compress: true
+            }
+        },
+        copy: {
+            build: {
+                files: [{
+                    expand: true,
+                    src: ['css/**/*.css', 'fonts/*', 'js/**'],
+                    dest: 'django/sandstone/static/sandstone/'
                 },
-                files: {
-                    'css/sandstone/sandstone-resp.min.css' : 'css/sandstone/sandstone-resp.less'
-                }
-            }
-        },
-        jshint: {
-            files: ['grunt.js', 'js/*.js'],
-            options: {
-                bitwise: true,
-                camelcase: true,
-                curly: true,
-                eqeqeq: true,
-                forin: true,
-                immed: true,
-                latedef: true,
-                newcap: true,
-                noarg: true,
-                quotmark: "single",
-                regexp: true,
-                undef: true,
-                unused: true,
-                trailing: true,
-                browser: true,
-                jquery: true
-            }
-        },
-        csslint: {
-            base_theme: {
-                src: "css/*.css",
-                rules: {
-                    "empty-rules": 2,
-                    "fallback-colors": 2,
-                    "font-sizes": 2,
-                    "important": 2,
-                    "outline-none": 2,
-                    "vendor-prefix": 2,
-                    "zero-units": 2
-                }
+                {
+                    expand: true,
+                    cwd: 'media/img/',
+                    src: ['**'],
+                    dest: 'django/sandstone/static/sandstone/img/'
+                },
+                {
+                    expand: true,
+                    cwd: 'templates/',
+                    src: ['*.html'],
+                    dest: 'django/sandstone/templates/sandstone/'
+                }]
             }
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-jshint')
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-css');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.registerTask('default', 'less:sandstone');
-    grunt.registerTask('lintify', ['jshint', 'csslint']);
-    grunt.registerTask('prep_prod', 'less:sandstone lintify less:sandstone_prod');
+    grunt.registerTask('release', ['clean', 'less:build', 'copy:build']);
 };
