@@ -146,6 +146,7 @@ nav.menu-bar ul li a {
   width: 10rem;
   border-radius: 0 6px 6px 6px;
   box-shadow: 1px 1px 2px #e0e0e0;
+  z-index: 99;
 }
 .drop-down .top-level ul li {
   margin-left: 0;
